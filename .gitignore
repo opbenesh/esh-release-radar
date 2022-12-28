@@ -1,0 +1,15 @@
+/.cache
+/.ipynb_checkpoints
+/.tmp.driveupload
+/book samples
+/cache
+/cache_folder
+/data.csv
+/metal_data.csv
+/model_data.csv
+/non_metal_data.csv
+/played dump 2022-11-26.txt
+/prediction_data.csv
+/seen dump 2022-11-26.txt
+/tree.dot
+/Utils.ipynb
