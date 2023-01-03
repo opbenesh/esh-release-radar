@@ -29,8 +29,10 @@ def add_features_to_tracks(sp,tracks):
     if tracks.count == 0:
         raise Exception("Cannot add features to an empty tracks dataframe")
     track_ids = tracks["id"]
+    print(f"tracks len:{len(tracks)}")
     track_features = []
     for track_id_subset in np.array_split(track_ids,100):
         track_features.extend(sp.audio_features(track_id_subset))
+    print(f"track_features len:{len(track_features)}")
     track_features_df = pd.DataFrame(track_features,columns=track_features[0].keys())
     return pd.merge(tracks,track_features_df,on=["id"],how="left")

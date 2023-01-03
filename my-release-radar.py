@@ -180,7 +180,10 @@ def add_new_review_tracks():
             artist_score[artist["id"]]+=1
 
     # get current review tracks (and filter irrelevant ones along the way)        
-    current_review_tracks = filter_tracks(get_all_playlist_tracks(sp,inbox_playlist_id),previously_played_tracks)
+    old_review_queue = get_all_playlist_tracks(sp,inbox_playlist_id)
+    print(f"Starting review count: {len(old_review_queue)}")
+    current_review_tracks = filter_tracks(old_review_queue,previously_played_tracks)
+    print(f"New review count: {len(current_review_tracks)}")
     
     print("Calculating skipped artists...")
     skipped_artists = dict()
