@@ -34,9 +34,6 @@ def rebuild_track_dict(track):
         "duration": track["duration_ms"] / 1000
     }
 
-def validate_features(feature_vector):
-    return feature_vector and all([not math.isnan(f) for f in feature_vector])
-
 def get_playlist_tracks(sp,playlist_id,audio_features=False):
     playlist_tracks = flatten_spotify_iterator(sp,sp.playlist_tracks(playlist_id))
     tracks = [rebuild_track_dict(playlist_track["track"]) for playlist_track in playlist_tracks]
@@ -47,7 +44,7 @@ def get_playlist_tracks(sp,playlist_id,audio_features=False):
         track_ids = tracks_df["id"]
         track_features = []
         for track_id_subset in np.array_split(track_ids,100):
-            track_features.extend(filter(validate_features,sp.audio_features(track_id_subset)))
+            track_features.extend(filter(None,sp.audio_features(track_id_subset)))
         track_features_df = pd.DataFrame(track_features,columns=track_features[0].keys())
         track_features_df = track_features_df[["id"] + audio_features_to_use]        
         tracks_df = pd.merge(tracks_df,track_features_df,on=["id"],how="left")
