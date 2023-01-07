@@ -49,7 +49,7 @@ def get_all_playlist_tracks(sp,playlist_id):
     while results['next']:
         results = sp.next(results)
         playlist_tracks.extend(results['items'])
-    return [playlist_track['track'] for playlist_track in playlist_tracks]
+    return [playlist_track['track'] for playlist_track in playlist_tracks if playlist_track['track']]
 
 def add_all_playlist_tracks(sp,playlist_id,tracks):
     while True:
@@ -87,18 +87,21 @@ def is_new_track(track):
 def strip_casefold_compare(s1,s2):
     return s1.casefold().strip() == s2.casefold().strip()
 
-def is_seen_track(track,seen_tracks):
-    for seen_track in seen_tracks:
-        if seen_track["id"] == track["id"]:
-            return True       
-        if strip_casefold_compare(track["name"],seen_track["name"]) and track["artists"]==seen_track["artists"]:
-            return True
-    return False
+def extract_and_normalize_names(track):
+    track_name = track["name"].strip().casefold()
+    track_artist_ids_flat = ','.join([artist.get("id","") for artist in track["artists"]])
+    return (track_name,track_artist_ids_flat)
 
 def filter_tracks(tracks,seen_tracks,albums_counter=dict()):
     new_tracks = []
+    seen_tracks_set = set([track["id"] for track in seen_tracks])
+    seen_tracks_set_name_artist = set(map(extract_and_normalize_names,seen_tracks))
     for track in tracks:
-        if not track or is_seen_track(track,seen_tracks) or not is_new_track(track):
+        if not track or not is_new_track(track):
+            continue
+        if track["id"] in seen_tracks:
+            continue
+        if extract_and_normalize_names(track) in seen_tracks_set_name_artist:
             continue
         album_id = track["album"]["id"]
         if album_id not in albums_counter:
@@ -124,18 +127,11 @@ def add_new_review_tracks():
     seen_tracks = []
     seen_old_track_ids = []
     seen_tracks = get_all_playlist_tracks(sp,seen_tracks_playlist_id)
-    #for track in get_all_playlist_tracks(sp,seen_tracks_playlist_id):
-    #    if is_new_track(track):
-    #        seen_tracks.append(track)
-    #    else:
-    #        seen_old_track_ids.append(track["id"])
-    #print("Cleaning up deprecated tracks...")
-    #remove_all_track_ids_from_playlist(sp,seen_tracks_playlist_id,seen_old_track_ids)
     seen_tracks += get_all_playlist_tracks(sp,previously_played_playlist_id)
     shortlisted_tracks = get_all_playlist_tracks(sp,shortlist_playlist_id)
     seen_tracks += shortlisted_tracks
     seen_tracks += get_all_playlist_tracks(sp,approved_playlist_id)
-    seen_albums_counter = Counter([track["album"]["id"] for track in seen_tracks]) # fix nulls
+    seen_albums_counter = Counter([track["album"]["id"] for track in seen_tracks if track and track["album"]])
 
     print("Reviewing playlists...")
     collected_tracks = []
