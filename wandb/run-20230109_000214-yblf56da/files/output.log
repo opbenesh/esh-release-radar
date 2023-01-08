@@ -1,0 +1,6 @@
+Decision tree,StratSplit,Identity:               precision    recall  f1-score   support
+           0       0.97      0.96      0.97      2160
+           1       0.05      0.06      0.05        68
+    accuracy                           0.94      2228
+   macro avg       0.51      0.51      0.51      2228
+weighted avg       0.94      0.94      0.94      2228

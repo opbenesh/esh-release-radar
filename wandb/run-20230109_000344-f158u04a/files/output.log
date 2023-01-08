@@ -1,0 +1,6 @@
+Decision tree,StratSplit,Over-sample:               precision    recall  f1-score   support
+           0       0.97      0.97      0.97      2160
+           1       0.09      0.10      0.10        68
+    accuracy                           0.94      2228
+   macro avg       0.53      0.54      0.53      2228
+weighted avg       0.94      0.94      0.94      2228

@@ -1,0 +1,37 @@
+2023-01-09 00:15:14,858 INFO    MainThread:31160 [wandb_setup.py:_flush():68] Configure stats pid to 31160
+2023-01-09 00:15:14,858 INFO    MainThread:31160 [wandb_setup.py:_flush():68] Loading settings from C:\Users\opben\.config\wandb\settings
+2023-01-09 00:15:14,858 INFO    MainThread:31160 [wandb_setup.py:_flush():68] Loading settings from c:\Users\opben\OneDrive\Documents\Esh Release Radar\wandb\settings
+2023-01-09 00:15:14,858 INFO    MainThread:31160 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True', 'mode': 'offline'}
+2023-01-09 00:15:14,858 INFO    MainThread:31160 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2023-01-09 00:15:14,859 INFO    MainThread:31160 [wandb_init.py:_log_setup():476] Logging user logs to c:\Users\opben\OneDrive\Documents\Esh Release Radar\wandb\offline-run-20230109_001514-1yjq7twy\logs\debug.log
+2023-01-09 00:15:14,859 INFO    MainThread:31160 [wandb_init.py:_log_setup():477] Logging internal logs to c:\Users\opben\OneDrive\Documents\Esh Release Radar\wandb\offline-run-20230109_001514-1yjq7twy\logs\debug-internal.log
+2023-01-09 00:15:14,860 INFO    MainThread:31160 [wandb_init.py:_jupyter_setup():426] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x000001DF10FEFD30>
+2023-01-09 00:15:14,860 INFO    MainThread:31160 [wandb_init.py:init():516] calling init triggers
+2023-01-09 00:15:14,860 INFO    MainThread:31160 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {}
+2023-01-09 00:15:14,860 INFO    MainThread:31160 [wandb_init.py:init():569] starting backend
+2023-01-09 00:15:14,860 INFO    MainThread:31160 [wandb_init.py:init():573] setting up manager
+2023-01-09 00:15:14,863 INFO    MainThread:31160 [backend.py:_multiprocessing_setup():102] multiprocessing start_methods=spawn, using: spawn
+2023-01-09 00:15:14,866 INFO    MainThread:31160 [wandb_init.py:init():580] backend started and connected
+2023-01-09 00:15:14,868 INFO    MainThread:31160 [wandb_run.py:_label_probe_notebook():1116] probe notebook
+2023-01-09 00:15:14,868 INFO    MainThread:31160 [wandb_run.py:_label_probe_notebook():1126] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2023-01-09 00:15:14,868 INFO    MainThread:31160 [wandb_init.py:init():658] updated telemetry
+2023-01-09 00:15:14,922 INFO    MainThread:31160 [wandb_init.py:init():728] starting run threads in backend
+2023-01-09 00:15:16,031 INFO    MainThread:31160 [wandb_run.py:_console_start():1986] atexit reg
+2023-01-09 00:15:16,031 INFO    MainThread:31160 [wandb_run.py:_redirect():1844] redirect: SettingsConsole.WRAP_RAW
+2023-01-09 00:15:16,031 INFO    MainThread:31160 [wandb_run.py:_redirect():1909] Wrapping output streams.
+2023-01-09 00:15:16,031 INFO    MainThread:31160 [wandb_run.py:_redirect():1931] Redirects installed.
+2023-01-09 00:15:16,032 INFO    MainThread:31160 [wandb_init.py:init():765] run started, returning control to user process
+2023-01-09 00:15:16,033 INFO    MainThread:31160 [wandb_config.py:__setitem__():155] config set architecture = Dummy - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x000001DF1101C190>>
+2023-01-09 00:15:16,033 INFO    MainThread:31160 [wandb_run.py:_config_callback():1163] config_cb architecture Dummy None
+2023-01-09 00:15:16,034 INFO    MainThread:31160 [wandb_config.py:__setitem__():155] config set splitter = StratSplit - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x000001DF1101C190>>
+2023-01-09 00:15:16,034 INFO    MainThread:31160 [wandb_run.py:_config_callback():1163] config_cb splitter StratSplit None
+2023-01-09 00:15:16,035 INFO    MainThread:31160 [wandb_config.py:__setitem__():155] config set transformer = Identity - <bound method Run._config_callback of <wandb.sdk.wandb_run.Run object at 0x000001DF1101C190>>
+2023-01-09 00:15:16,035 INFO    MainThread:31160 [wandb_run.py:_config_callback():1163] config_cb transformer Identity None
+2023-01-09 00:15:16,061 INFO    MainThread:31160 [wandb_run.py:_finish():1753] finishing run esh-release-radar/1yjq7twy
+2023-01-09 00:15:16,063 ERROR   MainThread:31160 [jupyter.py:save_history():440] Run pip install nbformat to save notebook history
+2023-01-09 00:15:16,063 INFO    MainThread:31160 [jupyter.py:save_ipynb():378] not saving jupyter notebook
+2023-01-09 00:15:16,063 INFO    MainThread:31160 [wandb_init.py:_jupyter_teardown():408] cleaning up jupyter logic
+2023-01-09 00:15:16,063 INFO    MainThread:31160 [wandb_run.py:_atexit_cleanup():1955] got exitcode: 0
+2023-01-09 00:15:16,064 INFO    MainThread:31160 [wandb_run.py:_restore():1938] restore
+2023-01-09 00:15:16,064 INFO    MainThread:31160 [wandb_run.py:_restore():1944] restore done

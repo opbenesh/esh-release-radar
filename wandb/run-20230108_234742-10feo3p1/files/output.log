@@ -1,0 +1,6 @@
+Decision tree,RandSplit,Identity:               precision    recall  f1-score   support
+           0       0.97      0.96      0.96      2155
+           1       0.02      0.03      0.02        73
+    accuracy                           0.93      2228
+   macro avg       0.49      0.49      0.49      2228
+weighted avg       0.94      0.93      0.93      2228
