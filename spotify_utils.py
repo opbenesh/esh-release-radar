@@ -26,12 +26,14 @@ def flatten_spotify_iterator(sp,iter):
 def rebuild_track_dict(track):
     return {
         "id": track["id"],
+        "track_name": track["name"],
         "artist_ids": ','.join(map(itemgetter("id"),track["artists"])),
         "artist_names": ','.join(map(itemgetter("name"),track["artists"])),
         "album_id": track["album"].get("id"),
         "album_name": track["album"].get("name"),
         "release_date": track["album"].get("release_date"),
-        "duration": track["duration_ms"] / 1000
+        "duration": track["duration_ms"] / 1000,
+        "uri": track["uri"]
     }
 
 def get_playlist_tracks(sp,playlist_id,audio_features=False):
