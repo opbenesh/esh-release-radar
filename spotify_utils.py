@@ -27,8 +27,8 @@ def rebuild_track_dict(track):
     return {
         "id": track["id"],
         "track_name": track["name"],
-        "artist_ids": ','.join(map(itemgetter("id"),track["artists"])),
-        "artist_names": ','.join(map(itemgetter("name"),track["artists"])),
+        "artist_id": track["artists"][0]["id"],
+        "artist_name": track["artists"][0]["name"],
         "album_id": track["album"].get("id"),
         "album_name": track["album"].get("name"),
         "release_date": track["album"].get("release_date"),

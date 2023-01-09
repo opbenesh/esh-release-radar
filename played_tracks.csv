@@ -1,9 +1,9 @@
-id,track_name,artist_ids,artist_names,album_id,album_name,release_date,duration,uri,playlist_offset
+id,track_name,artist_id,artist_name,album_id,album_name,release_date,duration,uri,playlist_offset
 28Z4IeW9azaCyVMQpJtyp7,Lost Meaning,2lP34R0Q7edlojuJrUMPnj,Cloakroom,0XABQZMWdLKgGfpFcsmBjR,Dissolution Wave,2022-01-28,271.978,spotify:track:28Z4IeW9azaCyVMQpJtyp7,0
 6Gyfnh212BLrBpIwjnXYIh,Imposter Syndrome,1tK28YnQJ6edBujubs7FXo,Whores,4l0JAsTXAZyERJR2h7O6z6,Imposter Syndrome,2022-03-01,244.915,spotify:track:6Gyfnh212BLrBpIwjnXYIh,1
 1ncl5OvSGPeQvbI4uNF6iV,I Close My Eyes so I Can See,5C9ocrDvsfSz8qcxG70QEe,Sylvaine,3Bx01WCfpuiY5OfHskn5Kz,Nova,2022-03-04,314.631,spotify:track:1ncl5OvSGPeQvbI4uNF6iV,2
 31P6mBeSiLy3kIOrxnRpwq,Digerliden,4KBxK8PodYKpYBpN6ewwmQ,Besvärjelsen,0zCEjOIs9FZPuHsSTSioIx,Digerliden,2022-03-04,282.293,spotify:track:31P6mBeSiLy3kIOrxnRpwq,3
-1uMcy6dDlrQby1nD6xwKOw,Satanic Slumber Party Part 2 (Midnight In Sodom),"0mL6LBSQ4bHe6hWq90KzHL,6XYvaoDGE0VmRt83Jss9Sn","Tropical Fuck Storm,King Gizzard & The Lizard Wizard",2xRTFyydYap0kAWPfJwU2i,Satanic Slumber Party,2022-03-14,342.551,spotify:track:1uMcy6dDlrQby1nD6xwKOw,4
+1uMcy6dDlrQby1nD6xwKOw,Satanic Slumber Party Part 2 (Midnight In Sodom),0mL6LBSQ4bHe6hWq90KzHL,Tropical Fuck Storm,2xRTFyydYap0kAWPfJwU2i,Satanic Slumber Party,2022-03-14,342.551,spotify:track:1uMcy6dDlrQby1nD6xwKOw,4
 5OW7KWn4omULRak20rzuNx,From Second Sight,1LNgvz72fQVLe7ZNIw6Ipo,Satan,4aUhvTjR9sxW2NIqyczsba,From Second Sight,2022-03-11,222.115,spotify:track:5OW7KWn4omULRak20rzuNx,5
 33AIUV05GZnow3MTZ8V7zh,Steelbound,2eOmJMVlhgac2iA8V2fR4W,Greyhawk,4mtNZLDpGmNqmrGOvVjG4z,Call of the Hawk,2022-02-08,250.932,spotify:track:33AIUV05GZnow3MTZ8V7zh,6
 53bqV8I1QeWPBfLSTlP0Ok,Fun's Over,6q4AmzK3GzCuEzkurnYuEQ,Drug Church,7o7dfudZfiankIzcfXXamT,Hygiene,2022-03-11,112.8,spotify:track:53bqV8I1QeWPBfLSTlP0Ok,7
@@ -20,7 +20,7 @@ id,track_name,artist_ids,artist_names,album_id,album_name,release_date,duration,
 3HX0YoAMG2aKL0NQn5HjLY,Altamira,144tOsApwFr8IORHSxLqLq,Mammoth Weed Wizard Bastard,1ctS55Z8IGbCgWvz9ymiPE,The Harvest,2022-03-25,464.148,spotify:track:3HX0YoAMG2aKL0NQn5HjLY,18
 740y38LGyr6gNETQSlKRoW,Delia Smith,27nD8P491xX8UzG3j01eIY,Sprints,0IZwGu5IVwpP4b6aCDs3zp,A Modern Job EP,2022-03-11,219.0,spotify:track:740y38LGyr6gNETQSlKRoW,19
 2dlbhtMreIf5X9bMPMrhn9,What Would You Do,05C3EDw4Rf0qMhrdjFKncL,Fucked Up,39NLIYLEjLnvA3N9wF9slF,Do All Words Can Do,2022-03-25,171.093,spotify:track:2dlbhtMreIf5X9bMPMrhn9,20
-4cj9oqXwEDaXOADJw9clMc,Wake Up Dead,"3JFsVIxOn7STeilPICkkB2,1Yox196W7bzVNZI7RBaPnf,6jhdkDXD8A4iI2pLpb90QC","Lamb of God,Megadeth,Dave Mustaine",6P0dS26zzxkYkxDFiLSrre,Wake Up Dead,2022-04-01,223.413,spotify:track:4cj9oqXwEDaXOADJw9clMc,21
+4cj9oqXwEDaXOADJw9clMc,Wake Up Dead,3JFsVIxOn7STeilPICkkB2,Lamb of God,6P0dS26zzxkYkxDFiLSrre,Wake Up Dead,2022-04-01,223.413,spotify:track:4cj9oqXwEDaXOADJw9clMc,21
 0CXIg7Mdn6Mn5ApZB87k7R,For The Last Time,6V6MyDcytW48stIykhH937,Skull Fist,7kotciioesojvM4kwMH5uR,For The Last Time,2022-03-31,241.786,spotify:track:0CXIg7Mdn6Mn5ApZB87k7R,22
 4DCtTtWYJLP3UD2s9Km0Ee,Grave Dive,2Ah9OuOj7B57gPD1cbwiaE,Municipal Waste,5D6o12XKVSm9arPgSFefgV,Grave Dive,2022-04-01,151.08,spotify:track:4DCtTtWYJLP3UD2s9Km0Ee,23
 6I5GhdPNr0Zjy7NmkSdXmX,PUPTHEBAND Inc. Is Filing For Bankruptcy,6A7uqgC2N1nUhrCLAytHxN,PUP,2bRpK0BpzYUQZYIzri35n6,THE UNRAVELING OF PUPTHEBAND,2022-04-01,185.133,spotify:track:6I5GhdPNr0Zjy7NmkSdXmX,24
@@ -32,7 +32,7 @@ id,track_name,artist_ids,artist_names,album_id,album_name,release_date,duration,
 0m4TZR8abPcRJfTQ7BdZcc,Logic Bomb,144tOsApwFr8IORHSxLqLq,Mammoth Weed Wizard Bastard,1ctS55Z8IGbCgWvz9ymiPE,The Harvest,2022-03-25,469.623,spotify:track:0m4TZR8abPcRJfTQ7BdZcc,30
 5XXcLqijhN5xHlCndA3427,See Sights Smell Smells,11O8jS9NNmewQkpiGXu0eb,Helms Alee,1Gq8mJ05VT31Q6Pi7397qt,See Sights Smell Smells,2022-03-10,162.158,spotify:track:5XXcLqijhN5xHlCndA3427,31
 4oWbOy5XxbC1FaxMuH3tiG,Notes on How to Trust,6ggf9cwxdhYNLFPhf4CazJ,GGGOLDDD,7Mr30EYBvw0478dQgJUsyX,This Shame Should Not Be Mine,2022-04-01,231.912,spotify:track:4oWbOy5XxbC1FaxMuH3tiG,32
-5olqNpXYIzRdzl2De7vCE9,Harvel,"4Le80wrubz9u0ZNpfsgz05,6aVjo0xHSiuW5hkasoYSR3","Dumb Numbers,Melvins",0aTHI7XugPz3D6h8UxzqwD,Broken Pipe EP,2022-04-29,119.68,spotify:track:5olqNpXYIzRdzl2De7vCE9,33
+5olqNpXYIzRdzl2De7vCE9,Harvel,4Le80wrubz9u0ZNpfsgz05,Dumb Numbers,0aTHI7XugPz3D6h8UxzqwD,Broken Pipe EP,2022-04-29,119.68,spotify:track:5olqNpXYIzRdzl2De7vCE9,33
 4vl5rB81x1nVJC8TZRUVeZ,Ancient Nug,7KwTOgmCktKmZoWfe3vUsF,Telekinetic Yeti,1W1N2yQPQggt0Inu5prDim,Ancient Nug,2022-04-08,291.038,spotify:track:4vl5rB81x1nVJC8TZRUVeZ,34
 6TpOpsgXwMvm0bSkdq27EC,Gaia,6XYvaoDGE0VmRt83Jss9Sn,King Gizzard & The Lizard Wizard,4tuqA7qbVsPukqsYPPrcF7,Omnium Gatherum,2022-04-22,311.339,spotify:track:6TpOpsgXwMvm0bSkdq27EC,35
 4U0ZkhJ5q8JOFzDhRrCsVI,Blood Spiller,5m2NwwPj4pzGQC0PQwMBWi,Cave In,4INTfLLX0IkZALmFceJKuZ,Blood Spiller,2022-04-26,241.427,spotify:track:4U0ZkhJ5q8JOFzDhRrCsVI,36
@@ -43,9 +43,9 @@ id,track_name,artist_ids,artist_names,album_id,album_name,release_date,duration,
 5bxisLZgmKZ1msHkXqkr84,The Chariot,3OX4skiU9o7fxdi5Li7k5l,Valley of the Sun,2VXmHnOJpC05asp3sZnpVC,The Chariot,2022-03-31,296.586,spotify:track:5bxisLZgmKZ1msHkXqkr84,41
 6u22WF9zosP5R7qlWsB3cq,Watch Out,18jTFcgHRRYHdwdof1MDZw,Thundermother,6Z7PAQTG3SsXbaMQIH743Y,Watch Out,2022-04-08,191.315,spotify:track:6u22WF9zosP5R7qlWsB3cq,42
 42wbaYJFOXd4UZxo0dHcsD,Souls of Megiddo,1CxIZzNyWMQbOq1RGbw7R2,Mirror,4SWzyQFBYMYVHQbsr8W3A4,The Day Bastard Leaders Die,2022-04-22,241.588,spotify:track:42wbaYJFOXd4UZxo0dHcsD,43
-4fnNlOmWOoLJtwETdf38bC,Spirit Liberation,"674hXtod8wUNvAUKUvElhf,63JN4A4IroUvAN1fyWmsHB","Mutually Assured Destruction,Randy Blythe",0QVaj5KVMxrrDg4KAnCWBK,Spirit Liberation,2022-04-15,150.4,spotify:track:4fnNlOmWOoLJtwETdf38bC,44
+4fnNlOmWOoLJtwETdf38bC,Spirit Liberation,674hXtod8wUNvAUKUvElhf,Mutually Assured Destruction,0QVaj5KVMxrrDg4KAnCWBK,Spirit Liberation,2022-04-15,150.4,spotify:track:4fnNlOmWOoLJtwETdf38bC,44
 2H29gcCEkBJWODlEJqjQi2,No More Sports,4iaDWP59Z3e62DW7YWDbIE,Post Animal,3CKHAA30592r33et4rOM5E,No More Sports,2022-04-06,238.663,spotify:track:2H29gcCEkBJWODlEJqjQi2,45
-0kco15ozQ8NHEeZSqgWZ0U,Holy Mountain,"7FhkwcO8Jd7BRWdllBpXBJ,2ed4HnBvIrLITZkNsmVRgd","Rotting Christ,Lars Nedland",6sDAVTX74dB0v6RdNCbYOL,Holy Mountain,2022-04-21,313.209,spotify:track:0kco15ozQ8NHEeZSqgWZ0U,46
+0kco15ozQ8NHEeZSqgWZ0U,Holy Mountain,7FhkwcO8Jd7BRWdllBpXBJ,Rotting Christ,6sDAVTX74dB0v6RdNCbYOL,Holy Mountain,2022-04-21,313.209,spotify:track:0kco15ozQ8NHEeZSqgWZ0U,46
 0trsDMSa16iKVLvGuwoee2,Life Unknown,5pBjhwqwoCpxGm4igqvgCi,Praise,2OHDTjpGe1QosiQiy7UVwe,Life Unknown,2022-04-22,217.646,spotify:track:0trsDMSa16iKVLvGuwoee2,47
 4rf2M4sifR7DqKMnWSo9b0,Skin & Sorrow,0qsMpawuC9W6kQlbu1mbo1,Frayle,5igJu84Qjd4KjbLfTE43ss,Skin & Sorrow,2022-04-01,324.105,spotify:track:4rf2M4sifR7DqKMnWSo9b0,48
 7vV5KQQ19H6wIfoJ6QPHN6,Path to R,6oQRvz9JHOHWtryh47KdOH,Druids,4w9iREsKLfGydiRkPt5g9I,Path to R,2022-04-05,406.653,spotify:track:7vV5KQQ19H6wIfoJ6QPHN6,49
@@ -111,9 +111,9 @@ id,track_name,artist_ids,artist_names,album_id,album_name,release_date,duration,
 2r99wUvCSzD3FntHAhaB9o,Tides of Change,7KwTOgmCktKmZoWfe3vUsF,Telekinetic Yeti,0WLSGFPnaW8nXyHmi8PhIq,Primordial,2022-07-08,168.344,spotify:track:2r99wUvCSzD3FntHAhaB9o,109
 0fU9H6KTGKtthrZZ5AHjZ1,Point of View,5vM2PNB3LjGceAKYvN3KI8,SPACED,3JcTBkIo5IvXcynwij8AOt,Spaced Jams,2022-07-22,121.131,spotify:track:0fU9H6KTGKtthrZZ5AHjZ1,110
 5BDcGkq3HoyvgvbMDnzCN5,Betrayal,0AZ3VR0YbFcS0Kgei7L2QF,Russian Circles,0EYPOzgnCNRp2Z95AZtyMf,Betrayal,2022-07-13,319.56,spotify:track:5BDcGkq3HoyvgvbMDnzCN5,111
-27uMsh4uGnICXv12WQd4fN,Night Stalkers,"1Yox196W7bzVNZI7RBaPnf,0eGh2jSWPBX5GuqIHoZJZG","Megadeth,ICE-T",7E23y6lreAy6VWsxTnFx4s,Night Stalkers / We’ll Be Back,2022-07-22,398.253,spotify:track:27uMsh4uGnICXv12WQd4fN,112
+27uMsh4uGnICXv12WQd4fN,Night Stalkers,1Yox196W7bzVNZI7RBaPnf,Megadeth,7E23y6lreAy6VWsxTnFx4s,Night Stalkers / We’ll Be Back,2022-07-22,398.253,spotify:track:27uMsh4uGnICXv12WQd4fN,112
 61mweqFLgaV6A6gP4LwK6Q,1975,6XIJivrO9KEaxh6bKai91s,Psychlona,4ESgefAeBOICZDbh51QzxF,1975,2022-06-25,363.705,spotify:track:61mweqFLgaV6A6gP4LwK6Q,113
-0f8Pt4d2M5MVdrg5PWRAQW,Degradation Rules (feat. Tony Iommi),"6ZLTlhejhndI4Rh53vYhrY,7iA7uWUkWLpapsaaqmzRQV","Ozzy Osbourne,Tony Iommi",7KlSuUcCKAJlrzWESm9jjq,Degradation Rules (feat. Tony Iommi),2022-07-22,250.274,spotify:track:0f8Pt4d2M5MVdrg5PWRAQW,114
+0f8Pt4d2M5MVdrg5PWRAQW,Degradation Rules (feat. Tony Iommi),6ZLTlhejhndI4Rh53vYhrY,Ozzy Osbourne,7KlSuUcCKAJlrzWESm9jjq,Degradation Rules (feat. Tony Iommi),2022-07-22,250.274,spotify:track:0f8Pt4d2M5MVdrg5PWRAQW,114
 5z0Y6jwTDwH6YbhH0DLWRR,Dreamkiller,5rASExwQQilVMuKmaOV2eW,Sumerlands,7p3f8b0cCBnrHmP7VpGZgw,Dreamkiller,2022-07-19,311.07,spotify:track:5z0Y6jwTDwH6YbhH0DLWRR,115
 6NLD3NrIUFALVqIK5VZgP6,Reign of Error,5o7MNRaQrt87SwYWxHEZvN,Dead Cross,4xaUhkUdiuUKb4aqIZPSOd,Reign of Error,2022-07-19,105.386,spotify:track:6NLD3NrIUFALVqIK5VZgP6,116
 5p61JWK78nkyZO9JLUhhDf,Survival Is Vengeance,2Tl7uZui4u9a3nXUM9VMei,Mindforce,6N1U0MdbQfOx98lWV3Xjgh,Survival Is Vengeance,2022-07-22,105.253,spotify:track:5p61JWK78nkyZO9JLUhhDf,117
@@ -186,7 +186,7 @@ id,track_name,artist_ids,artist_names,album_id,album_name,release_date,duration,
 2HZLXBOnaSRhXStMLrq9fD,Mary On A Cross,1Qp56T7n950O3EGMsSl81D,Ghost,6eOWfFjfBPRsAW0ZS4sbaF,Seven Inches Of Satanic Panic,2019-09-13,244.804,spotify:track:2HZLXBOnaSRhXStMLrq9fD,184
 12OIy70245yWU0r2cqkNWm,Waiting for an Alibi,5sW5eR9g4kNibasfrlw4EN,Spirit Adrift,2ZcnlqVOsNIFTgzomaK2EJ,20 Centuries Gone,2022-08-19,210.573,spotify:track:12OIy70245yWU0r2cqkNWm,185
 18np3mLcrafFVaydqTNRAV,Sì-XIV,1isrot4GGRmnqFT2vMAa5q,Dvne,4rqMk0bj9vhmLSgrpQ0fTY,Etemen Ænka,2021-03-19,382.866,spotify:track:18np3mLcrafFVaydqTNRAV,186
-5I8sG9fzdJMAm4e3B0rxDL,Coil,"7kHzfxMLtVHHb523s43rY1,6ZK2nrW8aCTg8Bid7I7N10","Converge,Chelsea Wolfe",4rEDzWnp2RoNzSx8DjO7gY,Bloodmoon: I,2021-11-19,368.453,spotify:track:5I8sG9fzdJMAm4e3B0rxDL,187
+5I8sG9fzdJMAm4e3B0rxDL,Coil,7kHzfxMLtVHHb523s43rY1,Converge,4rEDzWnp2RoNzSx8DjO7gY,Bloodmoon: I,2021-11-19,368.453,spotify:track:5I8sG9fzdJMAm4e3B0rxDL,187
 4UGZZDdrDxWTRrJJJNzCaQ,Celestial Blues,4C20AUsp5T2VNHmzSTSzYn,King Woman,3OKcePcXMmswbp5BOKIMWH,Celestial Blues,2021-07-30,276.54,spotify:track:4UGZZDdrDxWTRrJJJNzCaQ,188
 2rX97r2QjIXxHYjLAcGpSZ,The Beachland Ballroom,75mafsNqNE1WSEVxIKuY5C,IDLES,27ygqCfb4dXQ3jyXnC58FU,CRAWLER,2021-11-12,240.973,spotify:track:2rX97r2QjIXxHYjLAcGpSZ,189
 6VT4rMVsZ1yBYw5adzGCrI,And Shine On,6FMByiXYyVWCsnfRz08wO3,Grayceon,7DUsXt54xkqHd1rLUboMDS,Mothers Weavers Vultures,2020-12-18,227.538,spotify:track:6VT4rMVsZ1yBYw5adzGCrI,190
@@ -203,7 +203,7 @@ id,track_name,artist_ids,artist_names,album_id,album_name,release_date,duration,
 3aPfWdoPWmx1bhjvSyd6bB,(This is) The Night,1vKXAkXBGSbjgGcOPYLI6j,Årabrot,250c4E9Zot28XDVbUDbnyO,Norwegian Gothic,2021-04-09,169.786,spotify:track:3aPfWdoPWmx1bhjvSyd6bB,201
 3ijMJP5bFExYxg7PHMX2iV,Zera Azazel,5dPECrYzcJH968JAZZyhYY,Midnight Peacocks,0fCleOhbHbvkt9wPp08Jme,Zera Azazel,2021-08-31,326.52,spotify:track:3ijMJP5bFExYxg7PHMX2iV,202
 3WC0gsMu6HYTolvlsCEFKF,Blackened - Remastered,2ye2Wgw4gimLv2eAKyk1NB,Metallica,2bKDte0I4SceROjBMtYtKV,…And Justice for All (Remastered Deluxe Box Set),1988-08-25,402.143,spotify:track:3WC0gsMu6HYTolvlsCEFKF,203
-7lQeIeQFcqPnJpGICPBX1y,Night City Aliens,"4V5obzWMr7BHZrjOiQwB4K,0Q5Xiu38qDlI6cPr7VRJgL","The Armed,Homeschool Dropouts",4IzV5XnSOvOBZ2z9WKsi3W,"Cyberpunk 2077: Radio, Vol. 1 (Original Soundtrack)",2020-12-11,204.74,spotify:track:7lQeIeQFcqPnJpGICPBX1y,204
+7lQeIeQFcqPnJpGICPBX1y,Night City Aliens,4V5obzWMr7BHZrjOiQwB4K,The Armed,4IzV5XnSOvOBZ2z9WKsi3W,"Cyberpunk 2077: Radio, Vol. 1 (Original Soundtrack)",2020-12-11,204.74,spotify:track:7lQeIeQFcqPnJpGICPBX1y,204
 6u0vyETd4P1qIfggu3e2sU,Car Crash,75mafsNqNE1WSEVxIKuY5C,IDLES,27ygqCfb4dXQ3jyXnC58FU,CRAWLER,2021-11-12,233.626,spotify:track:6u0vyETd4P1qIfggu3e2sU,205
 2Ilz2qZp9D3O1qlbxW4azz,Sundowner,091cSUyhQCRgJreqXy17m5,Four Stroke Baron,35v264N4fiM74c9ABTquX8,Classics,2021-10-01,262.889,spotify:track:2Ilz2qZp9D3O1qlbxW4azz,206
 5Jw4HtXywSdnHdIh5o3LAL,The Weary,3X0a18Q9nluwuFYv5hB5cm,Monolord,3taiJZBdUo9DlOwQbLXsCc,The Weary,2021-09-14,298.12,spotify:track:5Jw4HtXywSdnHdIh5o3LAL,207
@@ -235,7 +235,7 @@ id,track_name,artist_ids,artist_names,album_id,album_name,release_date,duration,
 6gaiIOJF8LbjyvX7VKOLm8,Envy,7LeHdLOuiySZgt7ewdckbX,Afterlife,1wJhK0tlMtM1c190rxaZCr,Envy,2021-07-07,212.53,spotify:track:6gaiIOJF8LbjyvX7VKOLm8,233
 23xxsS6cE7qgw5drzpR5WF,Guided by Angels,3NqV2DJoAWsjl787bWaHW7,Amyl and The Sniffers,05dY0qvJmxM5dWf8luGI1L,Guided by Angels,2021-07-07,179.56,spotify:track:23xxsS6cE7qgw5drzpR5WF,234
 5bccYlSbCo13rsK5i3f4i3,Don't You Feel Amazing?,0XGJ3GUPwslwFJ66yNbHeh,Trash Boat,5fzm0EmXjDTEOQv6GjGg7v,Don't You Feel Amazing?,2021-06-02,225.841,spotify:track:5bccYlSbCo13rsK5i3f4i3,235
-5x3z2NNsQG9bMr7hAAqiA0,Bad Entertainment (feat. Milkie Way),"0XGJ3GUPwslwFJ66yNbHeh,6gKBfj9Z5WG7dSVUwAW4c4","Trash Boat,Milkie Way",2CJvMtO9IqPx73TZ4GpSNo,Bad Entertainment (feat. Milkie Way),2021-07-08,232.53,spotify:track:5x3z2NNsQG9bMr7hAAqiA0,236
+5x3z2NNsQG9bMr7hAAqiA0,Bad Entertainment (feat. Milkie Way),0XGJ3GUPwslwFJ66yNbHeh,Trash Boat,2CJvMtO9IqPx73TZ4GpSNo,Bad Entertainment (feat. Milkie Way),2021-07-08,232.53,spotify:track:5x3z2NNsQG9bMr7hAAqiA0,236
 6DtVPVYBdHuHmPqsUsGVMa,PYRO PYRO,1NRudBLaT84LXxfsYdFMhB,WARGASM (UK),0Ua6tFWJEJUExufIMSfJmj,Your Patron Saints / PYRO PYRO,2021-06-11,194.0,spotify:track:6DtVPVYBdHuHmPqsUsGVMa,237
 7Ds6JinAuD8zEWCVIcBO4u,No Song,1fPlNcA88PnTHeLk7k57UJ,Maggot Heart,7F8uTwS7HqSun7JNq4M7ys,No Song,2021-07-16,419.445,spotify:track:7Ds6JinAuD8zEWCVIcBO4u,238
 1OuhXoDx2sIChuNiB3hovd,White Buffalo,0MnazDWzh4tAnT5y4vWZFr,Crown Lands,5wTKkCOqwJa9EQXCj5kM8P,White Buffalo,2021-07-08,231.411,spotify:track:1OuhXoDx2sIChuNiB3hovd,239
@@ -263,7 +263,7 @@ id,track_name,artist_ids,artist_names,album_id,album_name,release_date,duration,
 35YuZV3Fyffqu9fOO2wXtm,Powered Up,1hOZLmKpSs0uaKbGeiWSf9,Cobra Man,0vwA08n7McS173xbrwYS1N,Powered Up,2021-05-26,183.162,spotify:track:35YuZV3Fyffqu9fOO2wXtm,261
 4BVkcq4708rC720KR7FDiE,Brand New Future,5R9WJjT2i9zmBWMNWD2rLp,Splinter,4E7dws94aYswrnwV4dERuv,Brand New Future,2021-06-18,267.213,spotify:track:4BVkcq4708rC720KR7FDiE,262
 76I8SPUVY3ZU9kVPXH9G9Q,Leaders of the Blind,2MIoyDjdxCUdnV59UqbJGk,Green Lung,4Fcx1bH6xAbM0sLIf1FpJj,Leaders of the Blind,2021-06-25,281.386,spotify:track:76I8SPUVY3ZU9kVPXH9G9Q,263
-7dOqFHOe85ObvZRHnyFYrf,BURN TO ASHES,"4du3q8TIzsZxZZKdRT23Jg,1mSt0lPGPlQ7qCwfay6a2S","Backxwash,Michael Go",4gaxRsSkSQmoyDsTesvplD,I LIE HERE BURIED WITH MY RINGS AND MY DRESSES,2021-06-20,241.714,spotify:track:7dOqFHOe85ObvZRHnyFYrf,264
+7dOqFHOe85ObvZRHnyFYrf,BURN TO ASHES,4du3q8TIzsZxZZKdRT23Jg,Backxwash,4gaxRsSkSQmoyDsTesvplD,I LIE HERE BURIED WITH MY RINGS AND MY DRESSES,2021-06-20,241.714,spotify:track:7dOqFHOe85ObvZRHnyFYrf,264
 1Kp80mQhmtLSJCJwzLrnXP,A Villain's Monologue,4WfUbvICLrqPW9rzuNGS1f,Blood Command,6jM1PfqatUmUVUxk0KrXgU,A Villain's Monologue,2021-06-03,210.0,spotify:track:1Kp80mQhmtLSJCJwzLrnXP,265
 671gFjeiyqUEIgXfLKj956,Play The Greatest Hits,3btzEQD6sugImIHPMRgkwV,Wolf Alice,1zt521PK0lam6J79DNMIJi,Blue Weekend,2021-06-04,147.664,spotify:track:671gFjeiyqUEIgXfLKj956,266
 6uGFLZuLASEqhhZuOciFlK,CUE,5mlbvTfWUOfDrUIK6dkNzv,Poppy,64qHcKFcreaFc70UtMFUMM,EAT (NXT Soundtrack),2021-06-08,206.023,spotify:track:6uGFLZuLASEqhhZuOciFlK,267
@@ -278,17 +278,17 @@ id,track_name,artist_ids,artist_names,album_id,album_name,release_date,duration,
 1iJDsSrrVM1GrToPOMnq0e,Fear of Dying,5mlbvTfWUOfDrUIK6dkNzv,Poppy,37p6hHok2BlHQ3VjiRGrTt,Fear of Dying,2021-05-26,163.062,spotify:track:1iJDsSrrVM1GrToPOMnq0e,276
 6mJ1xzqTOpUfIKVc4d5HDl,Diana,6ZK2nrW8aCTg8Bid7I7N10,Chelsea Wolfe,3KQGVYjzN1c5QhhdeGwIMF,Diana,2021-05-26,256.105,spotify:track:6mJ1xzqTOpUfIKVc4d5HDl,277
 0xKO76rHVYlmIgpTtfBDLa,Run,6yCjbLFZ9qAnWfsy9ujm5Y,Zeal & Ardor,6bBxm5wRqw3drqyT1yB8nC,Run,2021-05-25,196.986,spotify:track:0xKO76rHVYlmIgpTtfBDLa,278
-5PRU610vVE9hHvPqfH3qcX,Damaged Goods,"75mafsNqNE1WSEVxIKuY5C,3AmWjMXXtBJOmNGpUFSOAl","IDLES,Gang Of Four",1T0nUhUZKXBsgog7qe5u1F,Damaged Goods,2021-05-28,160.0,spotify:track:5PRU610vVE9hHvPqfH3qcX,279
+5PRU610vVE9hHvPqfH3qcX,Damaged Goods,75mafsNqNE1WSEVxIKuY5C,IDLES,1T0nUhUZKXBsgog7qe5u1F,Damaged Goods,2021-05-28,160.0,spotify:track:5PRU610vVE9hHvPqfH3qcX,279
 4DEzDE4aWQapm3OeOE2HHP,I’ve Been Everywhere,2kLc7t2L9AX4QXgMrlUmtu,L.A. Rats,0gmYpbcldA81iqby393A9K,I’ve Been Everywhere,2021-05-21,239.681,spotify:track:4DEzDE4aWQapm3OeOE2HHP,280
 5834UlRALHXn4NYxLFkWwW,A LITTLE LOVE,3r6Sk3pYxdJk7MekhBGgMR,Blood Red Shoes,78YASVI7IEn1yd3SWUfs3H,A LITTLE LOVE,2021-06-04,184.853,spotify:track:5834UlRALHXn4NYxLFkWwW,281
 4s2cOQQ28ZZhuH9uRHmqg1,Harvey Weinstein (Is a Symptom),2OQoYYxZxDpZgN1D14DPcY,Neighborhood Brats,4m9jwcqFcR6GIoaakL4ivS,Harvey Weinstein (Is a Symptom),2021-05-07,81.514,spotify:track:4s2cOQQ28ZZhuH9uRHmqg1,282
 2PvDXlyr9fV4YOCR5WpSa8,Finally Free,2hzpkeZKullRQgzgJqYPbv,Static Age,52VMROKYHm2ICEtjo8aoas,Promo 2021,2021-05-13,125.746,spotify:track:2PvDXlyr9fV4YOCR5WpSa8,283
-4AKAZGuK5rSiDQwayUQwDT,Nausea,"3PbVZAe3y6cQKBDdG2YASB,7mRVAzlt1fAAR9Cut6Rq8c","Violet Grohl,Dave Grohl",5bbTKsa0yi3rmoeOhnxVWb,Nausea,2021-04-23,209.322,spotify:track:4AKAZGuK5rSiDQwayUQwDT,284
+4AKAZGuK5rSiDQwayUQwDT,Nausea,3PbVZAe3y6cQKBDdG2YASB,Violet Grohl,5bbTKsa0yi3rmoeOhnxVWb,Nausea,2021-04-23,209.322,spotify:track:4AKAZGuK5rSiDQwayUQwDT,284
 65xDdrF3yIMgt8hzq8jfHI,X,7cCi9XoRu8Y1SyJ9c94fhc,Working Men's Club,6Gk9YZx1vaOUyECC6oVZhH,X,2021-04-22,209.28,spotify:track:65xDdrF3yIMgt8hzq8jfHI,285
-3fdi0Kf79LiuUrOeP97qHA,Where's My Baby?!,"6fSp7npf25PcGw9LGHUIc7,4du3q8TIzsZxZZKdRT23Jg","Lodia Mija,Backxwash",6KzecbUbURZJFo70fAMQ6n,Where's My Baby?!,2021-04-23,171.951,spotify:track:3fdi0Kf79LiuUrOeP97qHA,286
+3fdi0Kf79LiuUrOeP97qHA,Where's My Baby?!,6fSp7npf25PcGw9LGHUIc7,Lodia Mija,6KzecbUbURZJFo70fAMQ6n,Where's My Baby?!,2021-04-23,171.951,spotify:track:3fdi0Kf79LiuUrOeP97qHA,286
 6PhrbFbRW3Cchrv6klsLF5,Sphinx,0GDGKpJFhVpcjIGF8N6Ewt,Gojira,3bmdzJRZ4DLRTiA6yBBQcI,Fortitude,2021-04-30,240.358,spotify:track:6PhrbFbRW3Cchrv6klsLF5,287
 0AywDudSN3fgXKuJRy5aPf,Painting a Clear Picture from a Unreliable Narrator,7CFS5X96xBaJft4QdzTTC1,SeeYouSpaceCowboy...,6P6WwBj2lgrGH3EyURzgpO,A Clear Picture from a Unreliable Narrator,2021-04-27,200.715,spotify:track:0AywDudSN3fgXKuJRy5aPf,288
-2gxYf0Tdnn65M6HKzFU1ye,My Town (feat. Joe Talbot),"3r32a6mMdoPaSP1C7kYhMc,1Gh0mTt3Nt7AeLwWhpJY4R","Frank Carter & The Rattlesnakes,Joe Talbot",06cux1Vggkcy0TWsltLziy,My Town (feat. Joe Talbot),2021-04-27,164.485,spotify:track:2gxYf0Tdnn65M6HKzFU1ye,289
+2gxYf0Tdnn65M6HKzFU1ye,My Town (feat. Joe Talbot),3r32a6mMdoPaSP1C7kYhMc,Frank Carter & The Rattlesnakes,06cux1Vggkcy0TWsltLziy,My Town (feat. Joe Talbot),2021-04-27,164.485,spotify:track:2gxYf0Tdnn65M6HKzFU1ye,289
 3neCnBouNr3Xkbpe7Mzxh4,Circle With Me,4MzJMcHQBl9SIYSjwWn8QW,Spiritbox,4qcaZiTHCAwA4d156aErzG,Circle With Me,2021-04-30,233.88,spotify:track:3neCnBouNr3Xkbpe7Mzxh4,290
 6wOT4xSBIfD6oxSv7dGE6S,MMMOOOAAAAAYAYA,3ztRX1UoIOsFqpD7dB6R8O,illuminati hotties,6vLZTDbsUAVSQu5m0Xn9dJ,MMMOOOAAAAAYAYA,2021-04-21,184.756,spotify:track:6wOT4xSBIfD6oxSv7dGE6S,291
 1qYXynYdeodUFDH3DP7quK,Minor Case,0L9DzGxpz3Pn5cOk3VzkMr,VR SEX,3kF36RVrWbewcUSFTzu5eW,Cyber Crimes,2021-04-30,232.539,spotify:track:1qYXynYdeodUFDH3DP7quK,292
@@ -304,7 +304,7 @@ id,track_name,artist_ids,artist_names,album_id,album_name,release_date,duration,
 7yEWHAjDOOWKxjOAsvt64b,Modern Guy,18H0sAptzdwid08XGg1Lcj,Death From Above 1979,6H9QBo21NFBgN9Thf84pK7,Is 4 Lovers,2021-03-26,209.902,spotify:track:7yEWHAjDOOWKxjOAsvt64b,302
 40U2sffCF8fKAW2DHVTDXl,The Rule of Silence,1vKXAkXBGSbjgGcOPYLI6j,Årabrot,250c4E9Zot28XDVbUDbnyO,Norwegian Gothic,2021-04-09,288.093,spotify:track:40U2sffCF8fKAW2DHVTDXl,303
 5sPhooEuRCsP2on6MEWp9C,Vertigo,3rSpnCzb6wtsvZlGkkcHz4,Sumo Cyco,6bYBF2kFo8wsIZPeVxznAU,Vertigo,2021-04-08,189.946,spotify:track:5sPhooEuRCsP2on6MEWp9C,304
-43x4jHaRtDYtqlPKJvwjWL,Trilogy,"0JGTiwfinlCuANGu4Gq2XU,0OgdRTPItr9dw4XYp4JJUx","Silent Planet,Fit For A King",5AEn33q2yAt4g8rB1KAMoP,Trilogy / Stockholm,2021-04-09,204.123,spotify:track:43x4jHaRtDYtqlPKJvwjWL,305
+43x4jHaRtDYtqlPKJvwjWL,Trilogy,0JGTiwfinlCuANGu4Gq2XU,Silent Planet,5AEn33q2yAt4g8rB1KAMoP,Trilogy / Stockholm,2021-04-09,204.123,spotify:track:43x4jHaRtDYtqlPKJvwjWL,305
 34oIzPx1HX5MBQzYHM33lJ,Let Them Bleed,6jYtQDVzNYje5WcVZJ3TXy,Thunder Horse,3ZY5wTN8VSuYyLkPdpgpeH,Chosen One,2021-03-12,366.082,spotify:track:34oIzPx1HX5MBQzYHM33lJ,306
 18yN1M8EHIDTfRnCAt9Xy9,Hailstones for Rain,1vKXAkXBGSbjgGcOPYLI6j,Årabrot,0aXXHfpFXD09FJ4j8yv9ok,Hailstones for Rain,2021-03-10,296.72,spotify:track:18yN1M8EHIDTfRnCAt9Xy9,307
 3bJizQ0bkqErp2kECw35an,Samuraiah Carey,4jfu3bxtFywqyCRuTcsve4,Capra,4cfe8gJmLSOPA9wvNEssuG,Samuraiah Carey,2021-03-10,212.641,spotify:track:3bJizQ0bkqErp2kECw35an,308
@@ -318,25 +318,25 @@ id,track_name,artist_ids,artist_names,album_id,album_name,release_date,duration,
 5fIQiMWBUF5IZztP5pg1gQ,The Green Manalishi (With the Two Prong Crown),0FfuujZJUa7Z2JzhhiPI2z,Kadavar,1aePo6oir1bdUHxAxuXBOb,The Green Manalishi (With the Two Prong Crown),2021-02-26,314.675,spotify:track:5fIQiMWBUF5IZztP5pg1gQ,316
 5GntBYeuf6LIOoI6Kv3Egq,Hands Of The Ripper,6MC1i9hToT9dRxdN4hIHEW,Bloody Hammers,1SG9RAYs29ksG0kApAIsjA,Hands Of The Ripper,2020-12-03,172.013,spotify:track:5GntBYeuf6LIOoI6Kv3Egq,317
 6K4sl3JE7oeuUhDJvy9ku3,Activate,09mNj9XgCqgg6usfeXOoBg,Vektor,0rfHDsz52JsOhrqHSosKRs,Activate,2020-12-16,210.288,spotify:track:6K4sl3JE7oeuUhDJvy9ku3,318
-7u28TZOIFPj8v5SDUTh6vE,Friday Night Fire Fight,"0ZZBzndaYgoAtcc9T73xqc,1ul5ToGGiLSZCGlwj6Yio4","Aligns,Rubicones",28PcfVJsEpDcObv9swX6Z8,"Cyberpunk 2077: Radio, Vol. 1 (Original Soundtrack)",2020-12-11,214.7,spotify:track:7u28TZOIFPj8v5SDUTh6vE,319
-134IgRBV74jw5R5pYysYk9,Night City Aliens,"4V5obzWMr7BHZrjOiQwB4K,0Q5Xiu38qDlI6cPr7VRJgL","The Armed,Homeschool Dropouts",28PcfVJsEpDcObv9swX6Z8,"Cyberpunk 2077: Radio, Vol. 1 (Original Soundtrack)",2020-12-11,204.74,spotify:track:134IgRBV74jw5R5pYysYk9,320
+7u28TZOIFPj8v5SDUTh6vE,Friday Night Fire Fight,0ZZBzndaYgoAtcc9T73xqc,Aligns,28PcfVJsEpDcObv9swX6Z8,"Cyberpunk 2077: Radio, Vol. 1 (Original Soundtrack)",2020-12-11,214.7,spotify:track:7u28TZOIFPj8v5SDUTh6vE,319
+134IgRBV74jw5R5pYysYk9,Night City Aliens,4V5obzWMr7BHZrjOiQwB4K,The Armed,28PcfVJsEpDcObv9swX6Z8,"Cyberpunk 2077: Radio, Vol. 1 (Original Soundtrack)",2020-12-11,204.74,spotify:track:134IgRBV74jw5R5pYysYk9,320
 0Dx1VLQ3wlYcnKa6MDddfT,Broke,3m7JHlRsZs6jkvzWAnkyuq,Life's Question,7nLXC7lgc4ASX4JMXr622f,Broke,2020-12-11,127.774,spotify:track:0Dx1VLQ3wlYcnKa6MDddfT,321
 5eZZKHWEWCWyQAq5cnidut,Sacred Cement,4UyfygHFhKpDMztcfWBTAN,Twisted Thing,02T6vNGlNtdzUPpdUUtWw2,Sacred Cement,2020-12-07,152.64,spotify:track:5eZZKHWEWCWyQAq5cnidut,322
 56qkrMwEzu4cR4UrG6GHiL,Desperate Pleasures,0o7WWONtleH6PWLn5GIoCM,Every Time I Die,6TliRbh2qzFFExsCtKCVTh,A Colossal Wreck // Desperate Pleasures,2020-12-08,191.653,spotify:track:56qkrMwEzu4cR4UrG6GHiL,323
-7n3xQXDYjaW5L5vgEuxlY3,Hollywood,"34gLicNdz493863yZTanvC,4KoZpKiPeX4jIi7Euwcfuo","Emma Ruth Rundle,Thou",2Rle7dUqBUZmerBLiUNpUW,Hollywood,2020-12-10,315.466,spotify:track:7n3xQXDYjaW5L5vgEuxlY3,324
+7n3xQXDYjaW5L5vgEuxlY3,Hollywood,34gLicNdz493863yZTanvC,Emma Ruth Rundle,2Rle7dUqBUZmerBLiUNpUW,Hollywood,2020-12-10,315.466,spotify:track:7n3xQXDYjaW5L5vgEuxlY3,324
 27VzbKhx0VzZW6TZJsAb61,Meat Suit,3NFvorn4wvIOqrDLJbXroK,Doodseskader,0bxYNBFegzpmJOAkkOtk4n,MMXX : Year Zero,2020-12-11,302.46,spotify:track:27VzbKhx0VzZW6TZJsAb61,325
 2UsczqvD4iDtH8f9nBiI64,The Babysitter,3dPPEQeCf0pcfeEL4rBj4P,Deaf Chonky,6ccCAZPsz9VUdR13rua5rt,Harsh,2020-02-19,208.453,spotify:track:2UsczqvD4iDtH8f9nBiI64,326
 4BkM0A2FwgLB8Av8fKLMzg,Lazaretto,3uL4UpqShC4p2x1dJutoRW,Ghostemane,3gEv1vpsDgaEo4TLuu0Lwz,ANTI-ICON,2020-10-21,113.333,spotify:track:4BkM0A2FwgLB8Av8fKLMzg,327
 1vaDcGTEHAkAEV2PUjRRMn,Purple Me,24ExnkYwR4QoLamXGi4sOR,Slope,78sGQaDhgBvSd4HBnFpeU4,Purple Me,2021-01-07,213.72,spotify:track:1vaDcGTEHAkAEV2PUjRRMn,328
 1KKwdzzcJZNYPO50FbKAzE,I'm Staying Home,3X0a18Q9nluwuFYv5hB5cm,Monolord,3VcF6aiYe8wfxSWKWokIk1,I'm Staying Home,2021-01-14,364.0,spotify:track:1KKwdzzcJZNYPO50FbKAzE,329
-0V1MTRrJu0DKF5K9YtclUi,We All Are the Same,"7lZtZhN7z46k3DvQpEgtd5,4t9nQHcgMnKmnyWBHCnpvW,6EUH5apH2jXZ7D90icLoXD,2n0xeta5R7TAVqP7VmDMhT,7B33TOSBWWP0kxtEcDqTWR","Misterer,Marko Hietala,Petri Lindroos,Matias Kupiainen,Ben Varon",2frMO7LlZ2Erp2gYGUgXRV,Under Attack,2020-12-18,317.629,spotify:track:0V1MTRrJu0DKF5K9YtclUi,330
+0V1MTRrJu0DKF5K9YtclUi,We All Are the Same,7lZtZhN7z46k3DvQpEgtd5,Misterer,2frMO7LlZ2Erp2gYGUgXRV,Under Attack,2020-12-18,317.629,spotify:track:0V1MTRrJu0DKF5K9YtclUi,330
 4cYSZ0F8wZycfjsNMNcMeL,SIHEYMN's Lament,5PIuMlRY9PSLUSFzs6lQu1,Liturgy,5Q84MVz6dS62QsAzBiFTwY,Origin of the Alimonies,2020-11-20,221.692,spotify:track:4cYSZ0F8wZycfjsNMNcMeL,331
 03QIE6ty1kLaZprKsJ1WMe,Born to Fight,79CWSiI7ed0ubWZFpbgrGO,She/Beast,6xA6HusXCK2L5OupMoPaRT,Born to Fight,2020-11-24,239.574,spotify:track:03QIE6ty1kLaZprKsJ1WMe,332
 5mf3p8pyhLHoS4EWeD354I,The Triumph of King Freak (A Crypt of Preservation and Superstition),3HVdAiMNjYrQIKlOGxoGh5,Rob Zombie,7mdbCagfxurdPgceZXaccP,The Triumph of King Freak (A Crypt of Preservation and Superstition),2020-10-30,247.04,spotify:track:5mf3p8pyhLHoS4EWeD354I,333
-2kAxNPgubTKLGQ9VBOcx7v,Out of Existence,"34gLicNdz493863yZTanvC,4KoZpKiPeX4jIi7Euwcfuo","Emma Ruth Rundle,Thou",6X2TkIjKz0JmifXmr0Tj79,May Our Chambers Be Full,2020-10-30,222.746,spotify:track:2kAxNPgubTKLGQ9VBOcx7v,334
+2kAxNPgubTKLGQ9VBOcx7v,Out of Existence,34gLicNdz493863yZTanvC,Emma Ruth Rundle,6X2TkIjKz0JmifXmr0Tj79,May Our Chambers Be Full,2020-10-30,222.746,spotify:track:2kAxNPgubTKLGQ9VBOcx7v,334
 1wOM1Unja6Opz6LXsKwonY,Nocturnal Transmission,1nmxfjOFtJt1H3BgpG9OKe,The White Swan,2kLLwTLRxytW7IE6Y5mC2x,Nocturnal Transmission,2020-09-18,312.52,spotify:track:1wOM1Unja6Opz6LXsKwonY,335
 0Le2T1wm78Ycrtj7vdrCwG,Memoriam,2L2rV1gDa17HwFcFCWBIAx,Eleine,61dUMU9JXCrHEHhXgu3yFC,Memoriam,2020-11-13,375.186,spotify:track:0Le2T1wm78Ycrtj7vdrCwG,336
-1YSYZWVYTeWhCU9YJEFzSf,Scratching at the Surface,"5mdiygu3OgrNzMREgzdy4j,2WQQRKpu2PMLsHSrUJmyCS","2 Shadows,The Veer Union",7MgIX0ymNTINSe1xI9LOMU,Scratching at the Surface,2020-11-13,222.0,spotify:track:1YSYZWVYTeWhCU9YJEFzSf,337
+1YSYZWVYTeWhCU9YJEFzSf,Scratching at the Surface,5mdiygu3OgrNzMREgzdy4j,2 Shadows,7MgIX0ymNTINSe1xI9LOMU,Scratching at the Surface,2020-11-13,222.0,spotify:track:1YSYZWVYTeWhCU9YJEFzSf,337
 5MmZ225j5guy5tHWXA26H3,Lost & Forgotten,4gSQlkxtYOyPSRFksQk6tb,Affiance,3ORIN3AiUqIS1ggfBgRghp,Lost & Forgotten,2020-11-06,234.576,spotify:track:5MmZ225j5guy5tHWXA26H3,338
 7JlUiuCXUDK5blSa8Gb9Ob,Cure 4 Psycho,6OVWDN6Ty6RfnhUJlrYBlI,RedHook,5mPNhLXoyn98tShWrYJfKV,Cure 4 Psycho,2020-11-13,157.749,spotify:track:7JlUiuCXUDK5blSa8Gb9Ob,339
 5fFJYNDFdyZYc4ctaJKnsv,Obey the Queen,1ezwRjcVcSgr0HNIwRd2CN,SCARLET,5SgioAA6HgEiJm1YIi8w3g,Obey the Queen,2020-11-13,240.75,spotify:track:5fFJYNDFdyZYc4ctaJKnsv,340
@@ -355,7 +355,7 @@ id,track_name,artist_ids,artist_names,album_id,album_name,release_date,duration,
 01wRudo2vvYWpzT5w0P81j,Seeds of the Dead,5tgfw6rEJrNKXFkzIa0reH,Arsena,3vKumGr3hzYXgKwdV810d4,Seeds of the Dead,2022-08-26,298.644,spotify:track:01wRudo2vvYWpzT5w0P81j,353
 6JcyZaJIfPBcQDakBZAoPk,Beating Heart Cadaver,2MUKaa8eaR56ajPImoyy3x,Draagyn,7Map1emBBnHQF5U9Ye80iJ,Bent Rib,2022-08-26,257.693,spotify:track:6JcyZaJIfPBcQDakBZAoPk,354
 3raN3OHxmFyEm7E941Ez7T,Ritual of Anonymity,11tiA94VlUZOUTVCdQYw3a,Conan,7K63jlUitVPNKxbjrrMhtM,Evidence of Immortality,2022-08-19,216.318,spotify:track:3raN3OHxmFyEm7E941Ez7T,355
-2ZvyKyR8oESJeakAZezMI2,Friday Night,"10YNQq86z4shHwDSymTyWc,76zkavbwKNsrt24EH2gRtB","Cancer Bats,Amy Walpole",2t5FCFVFgKAuNhrGgFEZHH,Friday Night (feat. Amy Walpole),2022-08-18,175.136,spotify:track:2ZvyKyR8oESJeakAZezMI2,356
+2ZvyKyR8oESJeakAZezMI2,Friday Night,10YNQq86z4shHwDSymTyWc,Cancer Bats,2t5FCFVFgKAuNhrGgFEZHH,Friday Night (feat. Amy Walpole),2022-08-18,175.136,spotify:track:2ZvyKyR8oESJeakAZezMI2,356
 6S6KWV6SltScbAcOJU1arC,I Saw You Dancing,1Zdd7fqk5jtuMUwE7agpS1,Witch Fever,0PvgVoh30xJa3yicoZcwxx,I Saw You Dancing,2022-08-16,231.237,spotify:track:6S6KWV6SltScbAcOJU1arC,357
 4FlDsUa12CnR9VJRaz6lms,Scandinavian Gods,7zDtfSB0AOZWhpuAHZIOw5,Candlemass,7p3pL8VOjMfjjRUEXetKst,Scandinavian Gods,2022-08-18,276.666,spotify:track:4FlDsUa12CnR9VJRaz6lms,358
 35k3rFlVdXdf5K6wEqgkDO,Seize the Day,4WVIqFHJpDNINSp0rtAmG8,Freedom Hawk,5kMGixaHcHaIbriUkQgoGO,Seize the Day,2022-07-29,301.16,spotify:track:35k3rFlVdXdf5K6wEqgkDO,359
@@ -375,7 +375,7 @@ id,track_name,artist_ids,artist_names,album_id,album_name,release_date,duration,
 5YG4puJaov0GcnjlaVaYq4,When the Candle Burns Low…,0X41IVISCoYgYWT2PsfqoC,SONJA,1U6AdtLdMYpGKnniG78Q3a,When the Candle Burns Low...,2022-09-02,328.134,spotify:track:5YG4puJaov0GcnjlaVaYq4,373
 32hyrDAps5p3jsoBGOHQIc,Shouku,4VUguuy2qoVGDMwH1tL7Qr,Sigh,4RbsEs32Y34iOZvc3TnDTO,Shiki,2022-08-26,330.471,spotify:track:32hyrDAps5p3jsoBGOHQIc,374
 3ROQcr0U4X4qeS2qm5Ha7T,God Only Knows,6ZLTlhejhndI4Rh53vYhrY,Ozzy Osbourne,4u1LXToDGOdhDDf4c9zeqb,Patient Number 9,2022-09-09,300.656,spotify:track:3ROQcr0U4X4qeS2qm5Ha7T,375
-2daoDEsF06ULueoH2eGhIg,Immortal (feat. Mike McCready),"6ZLTlhejhndI4Rh53vYhrY,7njqqUBXHc5fpyXmUlfOUL","Ozzy Osbourne,Mike McCready",4u1LXToDGOdhDDf4c9zeqb,Patient Number 9,2022-09-09,183.967,spotify:track:2daoDEsF06ULueoH2eGhIg,376
+2daoDEsF06ULueoH2eGhIg,Immortal (feat. Mike McCready),6ZLTlhejhndI4Rh53vYhrY,Ozzy Osbourne,4u1LXToDGOdhDDf4c9zeqb,Patient Number 9,2022-09-09,183.967,spotify:track:2daoDEsF06ULueoH2eGhIg,376
 2prh4JE6gBHrQivR5KE2VZ,Caution,29xpUzbL2gwBW0VuHU26G8,Deville,5yrFkgYJZ3f2xutsdQXOyz,Killing Time,2022-08-19,271.613,spotify:track:2prh4JE6gBHrQivR5KE2VZ,377
 7fOQIeXmgHpqHJBENL1HGL,Victim of Delusion,7fRtbrVBXuRjfpdyEiOBRK,Craneium,3WegQ4iFhHi7l5OhcAZbRm,Victim of Delusion,2022-09-02,237.5,spotify:track:7fOQIeXmgHpqHJBENL1HGL,378
 1TC810G0XzfRVy18L0zl3Q,Bloodrusted Mother Earth,5tgfw6rEJrNKXFkzIa0reH,Arsena,5f2i7Jur3oXNzHNwbFzb53,Bloodrusted Mother Earth,2022-09-02,220.029,spotify:track:1TC810G0XzfRVy18L0zl3Q,379
@@ -396,16 +396,16 @@ id,track_name,artist_ids,artist_names,album_id,album_name,release_date,duration,
 1f5aqQHt4y7m3BykczaIpA,Black Sheep,2i96lKXt42EBg8j9paAeOf,Sonic Flower,6yjOnovxAwMfAbFWHkSNmP,Me and My Bellbottom Blues,2022-09-30,400.713,spotify:track:1f5aqQHt4y7m3BykczaIpA,394
 6Lp3UMAqqOIHkQC9NYbSqn,Like Hell,3fABaDSFO3HNDno3EGIIip,Abrams,4fxH2eQdwjhJFsr6MUM063,In The Dark,2022-09-09,239.165,spotify:track:6Lp3UMAqqOIHkQC9NYbSqn,395
 71YT7JxU6etsde4vTUz1BF,Demons,2S3xwpueZpPVUDTTv7Wefx,Gothminister,49YrBIMYXJy9AzK47mxAoK,Demons,2022-09-23,216.986,spotify:track:71YT7JxU6etsde4vTUz1BF,396
-7j8wuFNfwgRuGJvi1vY5qI,Come On Down (feat. Joe Talbot),"18TNVFTJ6WfeicsMRrdJHI,1Gh0mTt3Nt7AeLwWhpJY4R","Metz,Joe Talbot",2vTfTn3WEjwoNHLpA1bumO,Come On Down,2022-09-12,204.17,spotify:track:7j8wuFNfwgRuGJvi1vY5qI,397
+7j8wuFNfwgRuGJvi1vY5qI,Come On Down (feat. Joe Talbot),18TNVFTJ6WfeicsMRrdJHI,Metz,2vTfTn3WEjwoNHLpA1bumO,Come On Down,2022-09-12,204.17,spotify:track:7j8wuFNfwgRuGJvi1vY5qI,397
 1z6ZFbUhuMss2fYmMjWRkH,Mashhit,05C3EDw4Rf0qMhrdjFKncL,Fucked Up,4aFTDk1rem6FvyylkIXwOT,Oberon,2022-10-06,359.928,spotify:track:1z6ZFbUhuMss2fYmMjWRkH,398
 1gS3dzR3yZ0Xa5YiU32xLR,Children of the Revolution,1vKXAkXBGSbjgGcOPYLI6j,Årabrot,2BbjZMR5MGf76rZ8nNElGm,Children of the Revolution,2022-10-10,156.078,spotify:track:1gS3dzR3yZ0Xa5YiU32xLR,399
 42TPfiAllAzxUy0mVGYRZo,Call of the Void,6uejjWIOshliv2Ho0OJAQN,Devin Townsend,69pe2fyySxWt8Uf5stFr60,Call of the Void,2022-09-27,353.088,spotify:track:42TPfiAllAzxUy0mVGYRZo,400
 03Dw4bYwAnKKh1dN43QX6F,93,5PIuMlRY9PSLUSFzs6lQu1,Liturgy,24fqrDVfyRrSevwmiXK2Fb,As the Blood of God Bursts the Veins of Time,2022-10-05,272.804,spotify:track:03Dw4bYwAnKKh1dN43QX6F,401
-3u5rtZfdcQbVZdg63ijSBx,LIVE BY THE GUN,"6dOCTX1ATvti0d4uaxwlO3,5KCph1z3jaSwhtwPzoYp6i,0eGh2jSWPBX5GuqIHoZJZG","Lionheart,Body Count,ICE-T",08BrgaoGGD278VaS3ks9BC,LIVE BY THE GUN,2022-10-05,213.813,spotify:track:3u5rtZfdcQbVZdg63ijSBx,402
+3u5rtZfdcQbVZdg63ijSBx,LIVE BY THE GUN,6dOCTX1ATvti0d4uaxwlO3,Lionheart,08BrgaoGGD278VaS3ks9BC,LIVE BY THE GUN,2022-10-05,213.813,spotify:track:3u5rtZfdcQbVZdg63ijSBx,402
 1iUdrgwP2axNjWhlzjVgUH,Good Day to Be a Bad Guy,6Cvzf33JDzCIw2eJU8npQo,Wednesday 13,4m5wnR3JDdXMAwmA5ZBNjf,Good Day to Be a Bad Guy,2022-10-05,231.131,spotify:track:1iUdrgwP2axNjWhlzjVgUH,403
 4RskPBwi1q6KdvQKfyFPA9,Born To Raise Hell,1li4j1i1QQJHnYzbgOuwKw,M.U.T.T.,7ve3beBfQkkgi74jyjJx6k,Born To Raise Hell,2022-10-10,122.026,spotify:track:4RskPBwi1q6KdvQKfyFPA9,404
 6y5NRns20079BBIRh0u1gI,In The Clouds,3fABaDSFO3HNDno3EGIIip,Abrams,4fxH2eQdwjhJFsr6MUM063,In The Dark,2022-09-09,179.061,spotify:track:6y5NRns20079BBIRh0u1gI,405
-2KKUSuLLPGyOBMvkmLgh2A,Can’t Get None,"4us4NMG5wuqdUZvthZrj0Q,5sn6aQFrJvjsSIuaomA4to","Militarie Gun,MSPAINT",4amZwmwUtq1tGjarLqtvYV,All Roads Lead To The Gun (Deluxe),2022-10-21,143.562,spotify:track:2KKUSuLLPGyOBMvkmLgh2A,406
+2KKUSuLLPGyOBMvkmLgh2A,Can’t Get None,4us4NMG5wuqdUZvthZrj0Q,Militarie Gun,4amZwmwUtq1tGjarLqtvYV,All Roads Lead To The Gun (Deluxe),2022-10-21,143.562,spotify:track:2KKUSuLLPGyOBMvkmLgh2A,406
 3vBLbzaqKlJgDfquAEuZ5B,Beauty and Grace,1Zdd7fqk5jtuMUwE7agpS1,Witch Fever,7IsKOyk8quTcg8bpRptkgw,Beauty and Grace,2022-10-14,129.179,spotify:track:3vBLbzaqKlJgDfquAEuZ5B,407
 01WuvFpI2JYE7TfoqPSnWl,Freedom Is My Belief - MMXXIII Version,7gqKcfoY25do9k18uCCgIT,Bonfire,05KMBhhqiqxoH0QAVUuvxS,Freedom Is My Belief (MMXXIII Version),2022-10-14,266.227,spotify:track:01WuvFpI2JYE7TfoqPSnWl,408
 4kFmClObqlzcasVeUUqDmt,Blennoid,2OPhyle1utlCe9cYR4pAhA,Coffin Torture,7iOqed2l70SkB9zUh0SSR4,Blennoid,2022-10-07,270.001,spotify:track:4kFmClObqlzcasVeUUqDmt,409
@@ -453,7 +453,7 @@ id,track_name,artist_ids,artist_names,album_id,album_name,release_date,duration,
 3dJlIrHwx8RYLjM0wAZD6j,The Knife,3Gkit5uLARc6bv3AyYrh5Q,Royal Thunder,5eHvkUXLmxfWDKzWGmlZ4y,The Knife,2022-11-11,207.166,spotify:track:3dJlIrHwx8RYLjM0wAZD6j,451
 039LjnW10JKYN3kfEo4wZ0,Cold & Distant,3jmqk617nnjalSiZUCaaBi,Hangman's Chair,0cVHeZCI9YO7zovnvacfhy,A Loner,2022-02-11,309.293,spotify:track:039LjnW10JKYN3kfEo4wZ0,452
 03H21hhaJ4jQZiJUxvxpbD,Into the Fire,7uKoxJsvfOjGnzn1GIWQ3G,ASOMVEL,1iSWoxs4gzbS1GKg0uotIg,Into the Fire,2022-02-18,193.41,spotify:track:03H21hhaJ4jQZiJUxvxpbD,453
-6P6h9RdPJxPWqFqpLFIYA9,The Wolf You Feed (feat. Alissa White-Gluz),"73GhYkwfPQzmfJb1cdPqPf,0t9i2yNpYr4QGde2gz8YVg","Nita Strauss,Alissa White-Gluz",0RldApXzFEBMTvPetGTIcF,The Wolf You Feed (feat. Alissa White-Gluz),2022-10-25,234.0,spotify:track:6P6h9RdPJxPWqFqpLFIYA9,454
+6P6h9RdPJxPWqFqpLFIYA9,The Wolf You Feed (feat. Alissa White-Gluz),73GhYkwfPQzmfJb1cdPqPf,Nita Strauss,0RldApXzFEBMTvPetGTIcF,The Wolf You Feed (feat. Alissa White-Gluz),2022-10-25,234.0,spotify:track:6P6h9RdPJxPWqFqpLFIYA9,454
 3irkZrFRdtIgc9xmbb95In,Cloaked,3uHCTHxtg3IVAvhyrYsZvI,Rolo Tomassi,3821HxVYaIwRA9DLfo8GHa,Where Myth Becomes Memory,2022-02-04,234.955,spotify:track:3irkZrFRdtIgc9xmbb95In,455
 7AyllcfefWI33hVIg6x9Q1,Necrobionics,1vbr39xw4sKFUOiogA0DWN,Undeath,5pL9YDRmrXWNPEJGKiYUXs,It's Time...To Rise from the Grave,2022-04-22,211.267,spotify:track:7AyllcfefWI33hVIg6x9Q1,456
 60Lzj3jV1ZQRdzX9cEU92y,Don't Follow the Lights,3xIrP1oPgrtB8LvEUfqIqN,Hammers of Misfortune,7fJYG6f3MUrE6KEAr4hBDk,Overtaker,2022-12-02,279.095,spotify:track:60Lzj3jV1ZQRdzX9cEU92y,457
