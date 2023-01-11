@@ -1,6 +1,0 @@
-KNN,StratSplit,Over-sample:               precision    recall  f1-score   support
-           0       0.97      0.91      0.94      2160
-           1       0.04      0.12      0.06        68
-    accuracy                           0.88      2228
-   macro avg       0.50      0.51      0.50      2228
-weighted avg       0.94      0.88      0.91      2228
