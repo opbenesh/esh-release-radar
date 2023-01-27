@@ -11,7 +11,7 @@ from collections import Counter
 
 client_id = "YOUR_CLIENT_ID_HERE"
 client_secret = "YOUR_CLIENT_SECRET_HERE"
-redirect_uri = "http://localhost:8888/callback"
+redirect_uri = "http://localhost:9999/callback"
 
 max_items_per_album = 5
 
@@ -19,6 +19,7 @@ automated_playlists = [
     "74glIVP7azlpKA77RCgyDL", # Best New Songs Right Now
     "7s2xt5dCX0e5S4Om9vyHKg", # To The Teeth | New Metal
     "56jVMfxcgimVpN0MUSpBhp", # Roadburn: Essential Sounds
+    "4VDQ0PYPbuFqjA84cTlSMI", # Roadburn Festival 2023
     "37i9dQZEVXbg6Lzzwd9r3r", # Release Radar
     "37i9dQZF1DX5J7FIl4q56G", # All New Metal
     "1gD2CRBznaV63HIkGQiQM0", # Deathwish Staff Picks
@@ -28,7 +29,7 @@ automated_playlists = [
     "5Z9ssgGRlBWvT31GOLgi9R", # New Metal Songs 2022
     "1eNv0cYgq8XMwnaVqvRTHR", # Noisepicker Weekly
     "37i9dQZF1DXdiUbJTV2anj", # New Blood
-    "73zOM1mq1FoJ3CKUCLyj6J", # Machine Music - Autumn 2022
+    "4uObaSNdGaPWsS7fefPYrj", # Machine Music - Winter 2022-23
     "53x58hBq1M9qCzZxyRUmp4", # Weekly Wire
     "0imR1QYwwV13XTldnuHTOD"  # New Metal Friday
     ]
