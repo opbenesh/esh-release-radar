@@ -30,8 +30,7 @@ automated_playlists = [
     "37i9dQZF1DXdiUbJTV2anj", # New Blood
     "73zOM1mq1FoJ3CKUCLyj6J", # Machine Music - Autumn 2022
     "53x58hBq1M9qCzZxyRUmp4", # Weekly Wire
-    "0imR1QYwwV13XTldnuHTOD", # New Metal Friday
-    "5Z9ssgGRlBWvT31GOLgi9R"  # New Metal Songs 2022
+    "0imR1QYwwV13XTldnuHTOD"  # New Metal Friday
     ]
 
 seen_tracks_playlist_id = "5al4jEBoq01LPmFDuGDnq4"          # Automated: Reviewed Items
