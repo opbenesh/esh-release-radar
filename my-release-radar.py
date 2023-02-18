@@ -203,6 +203,9 @@ def add_new_review_tracks():
             continue
         track_score = max([artist_score[artist["id"]] for artist in track["artists"] if artist["id"] in artist_score]
                           ,default=0)
+        # be graceful with tracks from artists which have been only skipped once
+        if track_score == -1:
+            track_score = 0
         first_artist_name = track["artists"][0]["name"]
         scored_review_tracks[(track["id"],first_artist_name)] = track_score
     sort_function = lambda i: (-1*i[1],i[0][1])
