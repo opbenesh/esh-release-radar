@@ -13,3 +13,4 @@
 /seen dump 2022-11-26.txt
 /tree.dot
 /Utils.ipynb
+*.pyc
