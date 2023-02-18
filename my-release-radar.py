@@ -159,14 +159,14 @@ def add_new_review_tracks():
           
     print("Removing duplicates...")
     collected_tracks = list(set(collected_tracks))
-    if len(collected_tracks)==0:
-        print("No new tracks were found.")
-        return
     
     print("Saving " + str(len(collected_tracks)) + " new items...")
     add_all_playlist_tracks(sp,seen_tracks_playlist_id,collected_tracks)
     add_all_playlist_tracks(sp,seen_tracks_backup_playlist_id,collected_tracks)
     add_all_playlist_tracks(sp,inbox_playlist_id,collected_tracks)
+    if len(collected_tracks)==0:
+        print("No new tracks were found.")
+        return
 
     artist_score = dict()
     for track in previously_played_tracks:
