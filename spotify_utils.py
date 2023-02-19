@@ -35,7 +35,7 @@ def rebuild_track_dict(track):
     }
 
 def track_api_output_to_dataframe(tracks):
-    tracks = [rebuild_track_dict(track) for track in tracks]
+    tracks = [rebuild_track_dict(track) for track in tracks if track]
     columns = tracks[0].keys()
     tracks_df = pd.DataFrame(tracks,columns=columns)
     tracks_df["playlist_offset"]=tracks_df.index
