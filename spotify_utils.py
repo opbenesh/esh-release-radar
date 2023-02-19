@@ -1,13 +1,11 @@
 import spotipy
-import datetime
 from spotipy.oauth2 import SpotifyOAuth
 import pandas as pd
 import numpy as np
-from operator import itemgetter
-import math
+import os
 
-client_id = "YOUR_CLIENT_ID_HERE"
-client_secret = "YOUR_CLIENT_SECRET_HERE"
+client_id     = os.environ['RELEASE_RADAR_SPOTIFY_APP_ID']
+client_secret = os.environ['RELEASE_RADAR_SPOTIFY_APP_SECRET']
 redirect_uri = "http://localhost:9999/callback"
 scope = "playlist-modify-private"
 audio_features_to_use = ["acousticness","danceability","energy","instrumentalness","liveness","loudness","speechiness","tempo","valence"]
