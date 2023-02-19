@@ -1,4 +1,4 @@
-# esh-release-radar
+# Esh Release Radar - an alternative way to find new Spotify tracks
 `esh-release-radar` is an alternative to Spotify's own Release Radar feature. It works by:
 1. Crawling through a list of predefined playlists and searching for new tracks
 2. Checking the top tracks for previously liked artists to see if they've recently released anything
