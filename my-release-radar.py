@@ -1,13 +1,6 @@
 import glob
-import spotipy
 import datetime
-import threading
-import logging
 import time
-import itertools
-from spotipy.oauth2 import SpotifyOAuth
-import smtplib
-from email.mime.text import MIMEText
 from collections import Counter
 import pandas as pd
 import spotify_utils
@@ -46,14 +39,13 @@ def parse_date(date_string):
     for fmt in ("%Y-%m-%d","%Y","%Y-%m"):
         try:
             return datetime.datetime.strptime(date_string, fmt)
-        except:
+        except ValueError:
             pass
-    print("Skipping a weird date: " + date_string)
-    return None
+    raise ValueError(f'Could not parse date string "{date_string}"')
 
 def is_new_track(track):
     release_date = parse_date(track["release_date"])
-    return release_date is not None and (datetime.datetime.today() - release_date).days <= 60
+    return (datetime.datetime.today() - release_date).days <= 60
 
 def strip_casefold_compare(s1,s2):
     return s1.casefold().strip() == s2.casefold().strip()
@@ -83,7 +75,7 @@ def filter_tracks(tracks,seen_track_ids,seen_tracks_set_name_artist,albums_count
 def extract_ids(items):
     return [item["id"] for item in items]
 
-def add_new_review_tracks():
+def add_current_review_tracks():
     print("Starting!")
     sp = spotify_utils.spotify_connect()
     user = sp.current_user()
@@ -125,24 +117,22 @@ def add_new_review_tracks():
     collected_tracks = pd.concat([collected_tracks,tracked_artists_top_tracks])
           
     print("Removing duplicates...")
-    collected_tracks.drop_duplicates(subset=["id"],inplace=True)
     
-    print("Saving " + str(len(collected_tracks)) + " new items...")
     spotify_utils.add_tracks_to_playlist(sp,seen_tracks_playlist_id,collected_tracks)
     spotify_utils.add_tracks_to_playlist(sp,seen_tracks_backup_playlist_id,collected_tracks)
-    spotify_utils.add_tracks_to_playlist(sp,inbox_playlist_id,collected_tracks)
-    if len(collected_tracks)==0:
-        print("No new tracks were found.")
-        #return
 
+    old_review_tracks = spotify_utils.get_playlist_tracks(sp,inbox_playlist_id)
+    print(f"Previous review count: {len(old_review_tracks)}")
 
-    # get current review tracks (and filter irrelevant ones along the way)        
-    old_review_queue = spotify_utils.get_playlist_tracks(sp,inbox_playlist_id)
-    print(f"Starting review count: {len(old_review_queue)}")
+    current_review_tracks = pd.concat([old_review_tracks,collected_tracks])   
+    current_review_tracks.drop_duplicates(subset=["id"],inplace=True)
+    current_review_tracks.drop_duplicates(subset=["track_name","artist_name"],inplace=True)
+    print(f"New items found: {len(current_review_tracks) - len(old_review_tracks)}")
+    
     previously_played_tracks_ids_set = set(previously_played_tracks["id"].unique())
     previously_played_tracks_name_artist_set = set(previously_played_tracks.apply(extract_and_normalize_names,axis=1).unique())
-    current_review_tracks = filter_tracks(old_review_queue,previously_played_tracks_ids_set,previously_played_tracks_name_artist_set)
-    print(f"New review count: {len(current_review_tracks)}")
+    current_review_tracks = filter_tracks(current_review_tracks,previously_played_tracks_ids_set,previously_played_tracks_name_artist_set)
+    print(f"Updated review count after cleanup: {len(current_review_tracks)}")
     
     print("Ranking review tracks...")
     played_artist_score = previously_played_tracks["artist_id"].value_counts().to_dict()
@@ -160,10 +150,9 @@ def execute():
     while True:
         print("Starting...")
         try:
-            add_new_review_tracks()
+            add_current_review_tracks()
         except ConnectionError:
-            print("Connection error!")
-        return
+            print("Connection error! Will try again later.")
         print("Sleeping for an hour...")
         time.sleep(1*60*60)
 
