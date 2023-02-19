@@ -1,4 +1,7 @@
 # esh-release-radar
+A better way to discover new music.
+
+## Project Description
 `esh-release-radar` is an alternative to Spotify's own Release Radar feature. It works by:
 1. Crawling through a list of predefined playlists and searching for new tracks
 2. Checking the top tracks for previously liked artists to see if they've recently released anything
@@ -7,4 +10,5 @@
 
 I've built `esh-release-radar` in order to find cool new metal tracks for my very own metal radio show at KZRadio! Check it out at https://www.kzradio.net/shows/esh :)
 
-Note: the source code still contains some very me-specific things (e.g. hardcoded IDs of my playlists), but I do plan to make it ready for public usage in the close future.
+## Issues and Roadmap
+The source code still contains some very me-specific things (e.g. hardcoded IDs of my playlists), but I do plan to make it ready for public usage in the close future. In addition, I'm working on an ML-based recommender system using Spotify's audio features data.
