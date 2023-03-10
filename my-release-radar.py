@@ -19,11 +19,14 @@ automated_playlists = [
     "37i9dQZF1DX3YlUroplxjF", # Crash Course
     "7i3ybB0XlLwlFysT4uULLi", # Season of Mist New Tracks 2022
     "5Z9ssgGRlBWvT31GOLgi9R", # New Metal Songs 2022
-    "1eNv0cYgq8XMwnaVqvRTHR", # Noisepicker Weekly
     "37i9dQZF1DXdiUbJTV2anj", # New Blood
     "4uObaSNdGaPWsS7fefPYrj", # Machine Music - Winter 2022-23
     "53x58hBq1M9qCzZxyRUmp4", # Weekly Wire
-    "0imR1QYwwV13XTldnuHTOD"  # New Metal Friday
+    "0imR1QYwwV13XTldnuHTOD", # New Metal Friday
+    "37i9dQZF1DWXDJDWnzE39E", # Heavy Queens
+    "3N9kTuURGVUgG7rEc8kXch", # Slow Metal & Heavier Post Rock /2023
+    "1dRIvXur9F2L7ocdVpKRvm"  # Metal Up Your Ass /2023
+
     ]
 
 seen_tracks_playlist_id = "6G1K7HGkhBuhkllH8DNXKK"          # Automated: Reviewed Items
