@@ -149,15 +149,5 @@ def add_current_review_tracks():
     spotify_utils.overwrite_playlist(sp,temp_review_clone_id,current_review_tracks)
     spotify_utils.overwrite_playlist(sp,inbox_playlist_id,ordered_review_tracks)
 
-def execute():
-    while True:
-        print("Starting...")
-        try:
-            add_current_review_tracks()
-        except ConnectionError:
-            print("Connection error! Will try again later.")
-        print("Sleeping for an hour...")
-        time.sleep(1*60*60)
-
 if __name__ == '__main__':
-    execute()
+    add_current_review_tracks()
