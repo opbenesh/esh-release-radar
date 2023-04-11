@@ -7,7 +7,7 @@ import os
 client_id     = os.environ['RELEASE_RADAR_SPOTIFY_APP_ID']
 client_secret = os.environ['RELEASE_RADAR_SPOTIFY_APP_SECRET']
 redirect_uri = "http://localhost:9999/callback"
-scope = "playlist-modify-private"
+scope = "playlist-modify-private user-library-read"
 audio_features_to_use = ["acousticness","danceability","energy","instrumentalness","liveness","loudness","speechiness","tempo","valence"]
 
 
@@ -86,3 +86,7 @@ def truncate_playlist(sp,playlist_id):
 def overwrite_playlist(sp,playlist_id,tracks):
     truncate_playlist(sp,playlist_id)
     add_tracks_to_playlist(sp,playlist_id,tracks)
+
+def check_any_saved_tracks(sp):
+    result = sp.current_user_saved_tracks(limit=1)
+    return not not result['items']

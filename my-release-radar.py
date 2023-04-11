@@ -84,6 +84,10 @@ def add_current_review_tracks():
     user = sp.current_user()
     print("Connected!")
     
+    if spotify_utils.check_any_saved_tracks(sp):
+        print("Found saved tracks! Aborting")
+        return
+
     print("Retrieving previously seen tracks...")
     seen_tracks = []
     seen_old_track_ids = []
