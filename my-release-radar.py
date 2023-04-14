@@ -1,6 +1,6 @@
 import glob
-import datetime
 import time
+import datetime
 from collections import Counter
 import pandas as pd
 import spotify_utils
@@ -44,10 +44,12 @@ def parse_date(date_string):
             return datetime.datetime.strptime(date_string, fmt)
         except ValueError:
             pass
-    raise ValueError(f'Could not parse date string "{date_string}"')
+    return None
 
 def is_new_track(track):
     release_date = parse_date(track["release_date"])
+    if not release_date:
+        return None
     return (datetime.datetime.today() - release_date).days <= 60
 
 def strip_casefold_compare(s1,s2):
@@ -154,4 +156,8 @@ def add_current_review_tracks():
     spotify_utils.overwrite_playlist(sp,inbox_playlist_id,ordered_review_tracks)
 
 if __name__ == '__main__':
-    add_current_review_tracks()
+    while True:
+        add_current_review_tracks()
+        print(f"{time.strftime('%Y-%m-%d %H:%M:%S')} Going to sleep...")
+        time.sleep(3 * 60 * 60)
+        print(f"{time.strftime('%Y-%m-%d %H:%M:%S')} Waking up...")
