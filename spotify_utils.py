@@ -43,12 +43,17 @@ def track_api_output_to_dataframe(tracks):
 
 def get_playlist_tracks(sp,playlist_id,audio_features=False):
     playlist_tracks = flatten_spotify_iterator(sp,sp.playlist_tracks(playlist_id))
+    if not playlist_tracks:
+        return None
     tracks = [playlist_track["track"] for playlist_track in playlist_tracks]
     tracks_df = track_api_output_to_dataframe(tracks)
     if audio_features:
         track_ids = tracks_df["id"]
         track_features = []
-        for track_id_subset in np.array_split(track_ids,100):
+        remaining_track_ids = track_ids.to_list()
+        while remaining_track_ids:
+            track_id_subset = remaining_track_ids[:100]
+            remaining_track_ids = remaining_track_ids[100:]
             track_features.extend(filter(None,sp.audio_features(track_id_subset)))
         track_features_df = pd.DataFrame(track_features,columns=track_features[0].keys())
         track_features_df = track_features_df[["id"] + audio_features_to_use]        
@@ -81,6 +86,8 @@ def remove_tracks_from_playlist(sp,playlist_id,tracks):
 
 def truncate_playlist(sp,playlist_id):
     current_tracks = get_playlist_tracks(sp,playlist_id)
+    if current_tracks is None:
+        return
     remove_tracks_from_playlist(sp,playlist_id,current_tracks)
 
 def overwrite_playlist(sp,playlist_id,tracks):
@@ -90,3 +97,4 @@ def overwrite_playlist(sp,playlist_id,tracks):
 def check_any_saved_tracks(sp):
     result = sp.current_user_saved_tracks(limit=1)
     return not not result['items']
+

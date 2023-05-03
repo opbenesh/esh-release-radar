@@ -14,3 +14,4 @@
 /tree.dot
 /Utils.ipynb
 *.pyc
+*.prof
