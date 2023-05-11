@@ -1,9 +1,11 @@
 import glob
-import time
 import datetime
 from collections import Counter
 import pandas as pd
-import spotify_utils
+import spotipy_pandas
+import spotipy
+from spotipy.oauth2 import SpotifyOAuth
+import os
 
 max_items_per_album = 5
 
@@ -37,7 +39,17 @@ shortlist_playlist_id = "3qYnDeorQj7TPRlmqM8S5c"            # 2 Esh Shortlist
 approved_playlist_id = "7pBxidVP9h7ufxsFBMwOQq"             # 3 Esh Approved
 previously_played_playlist_id = "7EHT9D4ygqDlyGfqcFvkUv"    # 5 Esh Played
 tracked_playlist_id = "5PR4b0qnkhfCUdt4oLbn3o"              # X Esh Tracked
-    
+
+client_secret = os.environ['RELEASE_RADAR_SPOTIFY_APP_SECRET']
+
+
+client_id     = os.environ['RELEASE_RADAR_SPOTIFY_APP_ID']
+client_secret = os.environ['RELEASE_RADAR_SPOTIFY_APP_SECRET']
+redirect_uri = "http://localhost:9999/callback"
+scope = "playlist-modify-private user-library-read"
+
+reviewed_tracks_archive_csv_url = 'https://gist.githubusercontent.com/opbenesh/3505031079dd3e4dc555bb014cccd7ad/raw/bac3b5539020d65dfc2b6b2248524d1062a1beef/reviewed_tracks_archive_20230218.csv'
+
 def parse_date(date_string):
     for fmt in ("%Y-%m-%d","%Y","%Y-%m"):
         try:
@@ -82,11 +94,11 @@ def extract_ids(items):
 
 def add_current_review_tracks():
     print("Starting!")
-    sp = spotify_utils.spotify_connect()
+    sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope=scope,client_id=client_id,client_secret=client_secret,redirect_uri=redirect_uri))
     user = sp.current_user()
     print("Connected!")
     
-    if spotify_utils.check_any_saved_tracks(sp):
+    if sp.current_user_saved_tracks(limit=1)['items']:
         print("Found saved tracks! Aborting")
         return
 
@@ -94,23 +106,23 @@ def add_current_review_tracks():
     seen_tracks = []
     seen_old_track_ids = []
     
-    reviewed_tracks_archive = pd.concat(map(pd.read_csv, glob.glob("data/reviewed_tracks_archive_*.csv")))
-    reviewed_tracks_spotify = spotify_utils.get_playlist_tracks(sp,seen_tracks_playlist_id)
-    previously_played_tracks = spotify_utils.get_playlist_tracks(sp,previously_played_playlist_id)
-    shortlisted_tracks = spotify_utils.get_playlist_tracks(sp,shortlist_playlist_id)
-    approved_tracks = spotify_utils.get_playlist_tracks(sp,approved_playlist_id)
+    reviewed_tracks_archive = pd.read_csv(reviewed_tracks_archive_csv_url)
+    reviewed_tracks_spotify = spotipy_pandas.get_playlist_tracks(sp,seen_tracks_playlist_id)
+    previously_played_tracks = spotipy_pandas.get_playlist_tracks(sp,previously_played_playlist_id)
+    shortlisted_tracks = spotipy_pandas.get_playlist_tracks(sp,shortlist_playlist_id)
+    approved_tracks = spotipy_pandas.get_playlist_tracks(sp,approved_playlist_id)
     seen_tracks = pd.concat([reviewed_tracks_archive,reviewed_tracks_spotify,previously_played_tracks,shortlisted_tracks,approved_tracks])
     seen_albums_counter = Counter(seen_tracks.groupby(['album_id']).count())
     seen_tracks_ids_set = set(seen_tracks["id"].unique())
     seen_tracks_name_artist_set = set(seen_tracks.apply(extract_and_normalize_names,axis=1).unique())
-    tracked_artists_sample_tracks = spotify_utils.get_playlist_tracks(sp,tracked_playlist_id)
+    tracked_artists_sample_tracks = spotipy_pandas.get_playlist_tracks(sp,tracked_playlist_id)
 
     print("Reviewing playlists...")
     collected_track_dfs = []
     for playlist_id in automated_playlists:
         playlist_name=sp.playlist(playlist_id)["name"]
         print("Fetching tracks from " + playlist_name + ": ",end='')
-        playlist_tracks = spotify_utils.get_playlist_tracks(sp,playlist_id)
+        playlist_tracks = spotipy_pandas.get_playlist_tracks(sp,playlist_id)
         new_tracks = filter_tracks(playlist_tracks,seen_tracks_ids_set,seen_albums_counter)
         collected_track_dfs.append(new_tracks)
         print(f"({len(new_tracks)})")
@@ -120,17 +132,17 @@ def add_current_review_tracks():
     tracked_artist_ids = pd.concat([previously_played_tracks,approved_tracks,tracked_artists_sample_tracks])["artist_id"].unique()
     
     print("Fetching top tracks for previously played artists: ",end='')
-    tracked_artists_top_tracks = spotify_utils.get_artists_top_tracks(sp,tracked_artist_ids) 
+    tracked_artists_top_tracks = spotipy_pandas.get_artists_top_tracks(sp,tracked_artist_ids) 
     tracked_artists_top_tracks = filter_tracks(tracked_artists_top_tracks,seen_tracks_ids_set,seen_albums_counter)
     print(f"({len(tracked_artists_top_tracks)})")
     collected_tracks = pd.concat([collected_tracks,tracked_artists_top_tracks])
           
     print("Removing duplicates...")
     
-    spotify_utils.add_tracks_to_playlist(sp,seen_tracks_playlist_id,collected_tracks)
-    spotify_utils.add_tracks_to_playlist(sp,seen_tracks_backup_playlist_id,collected_tracks)
+    spotipy_pandas.add_tracks_to_playlist(sp,seen_tracks_playlist_id,collected_tracks)
+    spotipy_pandas.add_tracks_to_playlist(sp,seen_tracks_backup_playlist_id,collected_tracks)
 
-    old_review_tracks = spotify_utils.get_playlist_tracks(sp,inbox_playlist_id)
+    old_review_tracks = spotipy_pandas.get_playlist_tracks(sp,inbox_playlist_id)
     print(f"Previous review count: {len(old_review_tracks)}")
 
     current_review_tracks = pd.concat([old_review_tracks,collected_tracks])   
@@ -152,12 +164,8 @@ def add_current_review_tracks():
     ordered_review_tracks = current_review_tracks.sort_values(["score","artist_name"],ascending=[False,True])
 
     print("Re-creating review queue...")
-    spotify_utils.overwrite_playlist(sp,temp_review_clone_id,current_review_tracks)
-    spotify_utils.overwrite_playlist(sp,inbox_playlist_id,ordered_review_tracks)
+    spotipy_pandas.overwrite_playlist(sp,temp_review_clone_id,current_review_tracks)
+    spotipy_pandas.overwrite_playlist(sp,inbox_playlist_id,ordered_review_tracks)
 
 if __name__ == '__main__':
-    while True:
-        add_current_review_tracks()
-        print(f"{time.strftime('%Y-%m-%d %H:%M:%S')} Going to sleep...")
-        time.sleep(3 * 60 * 60)
-        print(f"{time.strftime('%Y-%m-%d %H:%M:%S')} Waking up...")
+    add_current_review_tracks()
