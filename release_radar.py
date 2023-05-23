@@ -1,4 +1,3 @@
-import glob
 import datetime
 from collections import Counter
 import pandas as pd
@@ -30,14 +29,22 @@ automated_playlists = [
     "1dRIvXur9F2L7ocdVpKRvm",  # Metal Up Your Ass /2023
 ]
 
-seen_tracks_playlist_id = "6G1K7HGkhBuhkllH8DNXKK"  # Automated: Reviewed Items
-seen_tracks_backup_playlist_id = "1Qd9qOo15OMYiXSzypBZX0"  # Automated: Reviewed Backup
-temp_review_clone_id = "5PGCp1CjpaV5DmqdyjSnTt"  # Automated: Temp Review Clone
-inbox_playlist_id = "1xsuqA0HU4bSosdaPyVlWG"  # 1 Esh Review
-shortlist_playlist_id = "3qYnDeorQj7TPRlmqM8S5c"  # 2 Esh Shortlist
-approved_playlist_id = "7pBxidVP9h7ufxsFBMwOQq"  # 3 Esh Approved
-previously_played_playlist_id = "7EHT9D4ygqDlyGfqcFvkUv"  # 5 Esh Played
-tracked_playlist_id = "5PR4b0qnkhfCUdt4oLbn3o"  # X Esh Tracked
+# Automated: Reviewed Items
+seen_tracks_playlist_id = "6G1K7HGkhBuhkllH8DNXKK"
+# Automated: Reviewed Backup
+seen_tracks_backup_playlist_id = "1Qd9qOo15OMYiXSzypBZX0"
+# Automated: Temp Review Clone
+temp_review_clone_id = "5PGCp1CjpaV5DmqdyjSnTt"
+# 1 Esh Review
+inbox_playlist_id = "1xsuqA0HU4bSosdaPyVlWG"
+# 2 Esh Shortlist
+shortlist_playlist_id = "3qYnDeorQj7TPRlmqM8S5c"
+# 3 Esh Approved
+approved_playlist_id = "7pBxidVP9h7ufxsFBMwOQq"
+# 5 Esh Played
+previously_played_playlist_id = "7EHT9D4ygqDlyGfqcFvkUv"
+# X Esh Tracked
+tracked_playlist_id = "5PR4b0qnkhfCUdt4oLbn3o"
 
 client_secret = os.environ["RELEASE_RADAR_SPOTIFY_APP_SECRET"]
 
@@ -47,7 +54,12 @@ client_secret = os.environ["RELEASE_RADAR_SPOTIFY_APP_SECRET"]
 redirect_uri = "http://localhost:9999/callback"
 scope = "playlist-modify-private user-library-read"
 
-reviewed_tracks_archive_csv_url = "https://gist.githubusercontent.com/opbenesh/3505031079dd3e4dc555bb014cccd7ad/raw/bac3b5539020d65dfc2b6b2248524d1062a1beef/reviewed_tracks_archive_20230218.csv"
+reviewed_tracks_archive_csv_url = (
+    "https://gist.githubusercontent.com/opbenesh/"
+    "3505031079dd3e4dc555bb014cccd7ad/raw/"
+    "bac3b5539020d65dfc2b6b2248524d1062a1beef/"
+    "reviewed_tracks_archive_20230218.csv"
+)
 
 
 def parse_date(date_string):
@@ -112,7 +124,6 @@ def add_current_review_tracks():
             redirect_uri=redirect_uri,
         )
     )
-    user = sp.current_user()
     print("Connected!")
 
     if sp.current_user_saved_tracks(limit=1)["items"]:
@@ -121,7 +132,6 @@ def add_current_review_tracks():
 
     print("Retrieving previously seen tracks...")
     seen_tracks = []
-    seen_old_track_ids = []
 
     reviewed_tracks_archive = pd.read_csv(reviewed_tracks_archive_csv_url)
     reviewed_tracks_spotify = spotipy_pandas.get_playlist_tracks(
@@ -143,9 +153,6 @@ def add_current_review_tracks():
     )
     seen_albums_counter = Counter(seen_tracks.groupby(["album_id"]).count())
     seen_tracks_ids_set = set(seen_tracks["id"].unique())
-    seen_tracks_name_artist_set = set(
-        seen_tracks.apply(extract_and_normalize_names, axis=1).unique()
-    )
     tracked_artists_sample_tracks = spotipy_pandas.get_playlist_tracks(
         sp, tracked_playlist_id
     )
