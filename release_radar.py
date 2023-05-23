@@ -46,9 +46,6 @@ previously_played_playlist_id = "7EHT9D4ygqDlyGfqcFvkUv"
 # X Esh Tracked
 tracked_playlist_id = "5PR4b0qnkhfCUdt4oLbn3o"
 
-client_secret = os.environ["RELEASE_RADAR_SPOTIFY_APP_SECRET"]
-
-
 client_id = os.environ["RELEASE_RADAR_SPOTIFY_APP_ID"]
 client_secret = os.environ["RELEASE_RADAR_SPOTIFY_APP_SECRET"]
 redirect_uri = "http://localhost:9999/callback"
@@ -108,10 +105,6 @@ def filter_tracks(
         return True
 
     return tracks[tracks.apply(filter_track, axis=1)]
-
-
-def extract_ids(items):
-    return [item["id"] for item in items]
 
 
 def add_current_review_tracks():
