@@ -5,6 +5,7 @@ import spotipy_pandas
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 import os
+from sqlalchemy import create_engine
 
 max_items_per_album = 5
 
@@ -22,41 +23,31 @@ automated_playlists = [
     "5Z9ssgGRlBWvT31GOLgi9R",  # New Metal Songs 2022
     "37i9dQZF1DXdiUbJTV2anj",  # New Blood
     "4uObaSNdGaPWsS7fefPYrj",  # Machine Music - Winter 2022-23
-    "53x58hBq1M9qCzZxyRUmp4",  # Weekly Wire
     "0imR1QYwwV13XTldnuHTOD",  # New Metal Friday
     "37i9dQZF1DWXDJDWnzE39E",  # Heavy Queens
     "3N9kTuURGVUgG7rEc8kXch",  # Slow Metal & Heavier Post Rock /2023
     "1dRIvXur9F2L7ocdVpKRvm",  # Metal Up Your Ass /2023
 ]
 
-# Automated: Reviewed Items
-seen_tracks_playlist_id = "6G1K7HGkhBuhkllH8DNXKK"
-# Automated: Reviewed Backup
-seen_tracks_backup_playlist_id = "1Qd9qOo15OMYiXSzypBZX0"
-# Automated: Temp Review Clone
-temp_review_clone_id = "5PGCp1CjpaV5DmqdyjSnTt"
 # 1 Esh Review
-inbox_playlist_id = "1xsuqA0HU4bSosdaPyVlWG"
+# inbox_playlist_id = "1xsuqA0HU4bSosdaPyVlWG"
 # 2 Esh Shortlist
 shortlist_playlist_id = "3qYnDeorQj7TPRlmqM8S5c"
 # 3 Esh Approved
 approved_playlist_id = "7pBxidVP9h7ufxsFBMwOQq"
 # 5 Esh Played
-previously_played_playlist_id = "7EHT9D4ygqDlyGfqcFvkUv"
-# X Esh Tracked
-tracked_playlist_id = "5PR4b0qnkhfCUdt4oLbn3o"
+# previously_played_playlist_id = "7EHT9D4ygqDlyGfqcFvkUv"
 
 client_id = os.environ["RELEASE_RADAR_SPOTIFY_APP_ID"]
 client_secret = os.environ["RELEASE_RADAR_SPOTIFY_APP_SECRET"]
 redirect_uri = "http://localhost:9999/callback"
 scope = "playlist-modify-private user-library-read"
 
-reviewed_tracks_archive_csv_url = (
-    "https://gist.githubusercontent.com/opbenesh/"
-    "3505031079dd3e4dc555bb014cccd7ad/raw/"
-    "bac3b5539020d65dfc2b6b2248524d1062a1beef/"
-    "reviewed_tracks_archive_20230218.csv"
-)
+db_conn_str = os.environ["RELEASE_RADAR_DB_CONN_STR"]
+
+super_user_id = 1
+
+dry_run = False
 
 
 def parse_date(date_string):
@@ -107,8 +98,10 @@ def filter_tracks(
     return tracks[tracks.apply(filter_track, axis=1)]
 
 
-def add_current_review_tracks():
+def operate_radar():
     print("Starting!")
+
+    print("Connecting to Spotify...")
     sp = spotipy.Spotify(
         auth_manager=SpotifyOAuth(
             scope=scope,
@@ -117,58 +110,103 @@ def add_current_review_tracks():
             redirect_uri=redirect_uri,
         )
     )
-    print("Connected!")
-
-    if sp.current_user_saved_tracks(limit=1)["items"]:
-        print("Found saved tracks! Aborting")
-        return
+    print("Connecting to database...")
+    db_engine = create_engine(db_conn_str)
 
     print("Retrieving previously seen tracks...")
-    seen_tracks = []
+    previously_reviewed_tracks = pd.read_sql("reviewed_items", db_engine)
+    print(f"Seen tracks count: {len(previously_reviewed_tracks)}")
+    print("Backing up seen tracks...")
+    formatted_time = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    previously_reviewed_tracks.to_csv(
+        f"backup/seen_tracks_{formatted_time}.csv.gz", index=False, compression="gzip"
+    )
 
-    reviewed_tracks_archive = pd.read_csv(reviewed_tracks_archive_csv_url)
-    reviewed_tracks_spotify = spotipy_pandas.get_playlist_tracks(
-        sp, seen_tracks_playlist_id
+    for user in pd.read_sql("users", db_engine).to_dict("records"):
+        print(f'Finding new tracks for {user["name"]}...')
+        user_id = user["id"]
+        super_mode = user_id == super_user_id
+        if super_mode and sp.current_user_saved_tracks(limit=1)["items"]:
+            print("Found saved tracks! Aborting")
+            continue
+        tracked_playlist_id = user["tracked_artists_playlist_id"]
+        inbox_playlist_id = user["inbox_playlist_id"]
+        user_reviewed_tracks = previously_reviewed_tracks[
+            previously_reviewed_tracks["user_id"] == user_id
+        ]
+        find_new_tracks(
+            super_mode,
+            user_id,
+            tracked_playlist_id,
+            inbox_playlist_id,
+            sp,
+            db_engine,
+            user_reviewed_tracks,
+        )
+
+
+def find_new_tracks(
+    super_mode,
+    user_id,
+    tracked_playlist_id,
+    inbox_playlist_id,
+    sp,
+    db_engine,
+    previously_reviewed_tracks,
+):
+    empty_tracks_playlist = previously_reviewed_tracks[
+        previously_reviewed_tracks["user_id"] < 0
+    ].copy()
+
+    tracked_playlist_tracks = spotipy_pandas.get_playlist_tracks(
+        sp, tracked_playlist_id
     )
-    previously_played_tracks = spotipy_pandas.get_playlist_tracks(
-        sp, previously_played_playlist_id
-    )
-    shortlisted_tracks = spotipy_pandas.get_playlist_tracks(sp, shortlist_playlist_id)
-    approved_tracks = spotipy_pandas.get_playlist_tracks(sp, approved_playlist_id)
+
+    if super_mode:
+        shortlisted_tracks = spotipy_pandas.get_playlist_tracks(
+            sp, shortlist_playlist_id
+        )
+        approved_tracks = spotipy_pandas.get_playlist_tracks(sp, approved_playlist_id)
+    else:
+        shortlisted_tracks = empty_tracks_playlist.copy()
+        approved_tracks = empty_tracks_playlist.copy()
+
     seen_tracks = pd.concat(
         [
-            reviewed_tracks_archive,
-            reviewed_tracks_spotify,
-            previously_played_tracks,
+            previously_reviewed_tracks,
             shortlisted_tracks,
             approved_tracks,
         ]
     )
     seen_albums_counter = Counter(seen_tracks.groupby(["album_id"]).count())
     seen_tracks_ids_set = set(seen_tracks["id"].unique())
-    tracked_artists_sample_tracks = spotipy_pandas.get_playlist_tracks(
-        sp, tracked_playlist_id
-    )
 
-    print("Reviewing playlists...")
-    collected_track_dfs = []
-    for playlist_id in automated_playlists:
-        playlist_name = sp.playlist(playlist_id)["name"]
-        print("Fetching tracks from " + playlist_name + ": ", end="")
-        playlist_tracks = spotipy_pandas.get_playlist_tracks(sp, playlist_id)
-        new_tracks = filter_tracks(
-            playlist_tracks, seen_tracks_ids_set, seen_albums_counter
-        )
-        collected_track_dfs.append(new_tracks)
-        print(f"({len(new_tracks)})")
-    collected_tracks = pd.concat(collected_track_dfs)
+    if super_mode:
+        print("Reviewing playlists...")
+        collected_track_dfs = []
+        for playlist_id in automated_playlists:
+            try:
+                playlist_name = sp.playlist(playlist_id)["name"]
+            except spotipy.client.SpotifyException:
+                print(f"Playlist {playlist_id} not found, skipping.")
+                continue
+            print("Fetching tracks from " + playlist_name + ": ", end="")
+            playlist_tracks = spotipy_pandas.get_playlist_tracks(sp, playlist_id)
+            new_tracks = filter_tracks(
+                playlist_tracks, seen_tracks_ids_set, seen_albums_counter
+            )
+            collected_track_dfs.append(new_tracks)
+            print(f"({len(new_tracks)})")
+        collected_tracks = pd.concat(collected_track_dfs)
+    else:
+        collected_tracks = empty_tracks_playlist.copy()
 
-    print("Retrieving previously played artists...")
-    tracked_artist_ids = pd.concat(
-        [previously_played_tracks, approved_tracks, tracked_artists_sample_tracks]
-    )["artist_id"].unique()
+    print("Retrieving tracked artists...")
+    tracked_artist_ids = pd.concat([tracked_playlist_tracks, approved_tracks])[
+        "artist_id"
+    ].unique()
 
-    print("Fetching top tracks for previously played artists: ", end="")
+    print("Fetching top tracks for tracked artists: ", end="")
     tracked_artists_top_tracks = spotipy_pandas.get_artists_top_tracks(
         sp, tracked_artist_ids
     )
@@ -178,14 +216,9 @@ def add_current_review_tracks():
     print(f"({len(tracked_artists_top_tracks)})")
     collected_tracks = pd.concat([collected_tracks, tracked_artists_top_tracks])
 
-    print("Removing duplicates...")
-
-    spotipy_pandas.add_tracks_to_playlist(sp, seen_tracks_playlist_id, collected_tracks)
-    spotipy_pandas.add_tracks_to_playlist(
-        sp, seen_tracks_backup_playlist_id, collected_tracks
-    )
-
     old_review_tracks = spotipy_pandas.get_playlist_tracks(sp, inbox_playlist_id)
+    if old_review_tracks is None:
+        old_review_tracks = empty_tracks_playlist.copy()
     print(f"Previous review count: {len(old_review_tracks)}")
 
     current_review_tracks = pd.concat([old_review_tracks, collected_tracks])
@@ -195,9 +228,9 @@ def add_current_review_tracks():
     )
     print(f"New items found: {len(current_review_tracks) - len(old_review_tracks)}")
 
-    previously_played_tracks_ids_set = set(previously_played_tracks["id"].unique())
+    previously_played_tracks_ids_set = set(tracked_playlist_tracks["id"].unique())
     previously_played_tracks_name_artist_set = set(
-        previously_played_tracks.apply(extract_and_normalize_names, axis=1).unique()
+        tracked_playlist_tracks.apply(extract_and_normalize_names, axis=1).unique()
     )
     current_review_tracks = filter_tracks(
         current_review_tracks,
@@ -207,9 +240,9 @@ def add_current_review_tracks():
     print(f"Updated review count after cleanup: {len(current_review_tracks)}")
 
     print("Ranking review tracks...")
-    played_artist_score = previously_played_tracks["artist_id"].value_counts().to_dict()
+    played_artist_score = tracked_playlist_tracks["artist_id"].value_counts().to_dict()
     ignored_track_ids_for_scoring = set(
-        shortlisted_tracks["id"].to_list() + current_review_tracks["id"].to_list()
+        pd.concat([shortlisted_tracks, current_review_tracks])["id"].to_list()
     )
     seen_artist_score = (
         seen_tracks[~seen_tracks["id"].isin(ignored_track_ids_for_scoring)]["artist_id"]
@@ -226,10 +259,15 @@ def add_current_review_tracks():
         ["score", "artist_name"], ascending=[False, True]
     )
 
-    print("Re-creating review queue...")
-    spotipy_pandas.overwrite_playlist(sp, temp_review_clone_id, current_review_tracks)
-    spotipy_pandas.overwrite_playlist(sp, inbox_playlist_id, ordered_review_tracks)
+    if not dry_run:
+        print("Re-creating review queue...")
+        spotipy_pandas.overwrite_playlist(sp, inbox_playlist_id, ordered_review_tracks)
+        print("Updating reviewed items log...")
+        collected_tracks["user_id"] = user_id
+        collected_tracks.to_sql(
+            "reviewed_items", db_engine, if_exists="append", index=False
+        )
 
 
 if __name__ == "__main__":
-    add_current_review_tracks()
+    operate_radar()
